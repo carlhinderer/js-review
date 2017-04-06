@@ -12,6 +12,12 @@
       	margin-top: 50px; 
       	margin-bottom: 20px;
       }
+      form {
+      	border: thin solid green;
+      }
+      #main-content {
+      	margin-bottom: 200px;
+      }
     </style>
   </head>
 
@@ -39,12 +45,12 @@
       </div>
       <hr />
   
-      <div>
+      <div id="head-section">
         <h3 class="section-title">Head Elements</h3>
       </div>
       <hr />
   
-      <div>
+      <div id="text-section">
         <h3 class="section-title">Block Elements</h3>
 
         <p>Paragraph Tag &lt;/p></p>
@@ -70,7 +76,7 @@
       </div>  
       <hr />
 
-      <div>
+      <div id="list-section">
         <h3 class="section-title">Lists</h3>
 
         <h4>Unordered List</h4>
@@ -98,7 +104,7 @@
       </div>
       <hr />
   
-      <div>
+      <div id="table-section">
         <h3 class="section-title">Tables</h3>
 
         <table border="1">
@@ -113,7 +119,97 @@
         </table>
       </div>
       <hr />
-    </div>
 
+      <div id="form-section">
+        <h3 class="section-title">Forms</h3>
+
+        <form action="url_to_send_data" method="post">
+          Textbox: <br />
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" value="" size="30" maxlength="40" />
+          <br /><br />
+
+          Password Box: <br />
+          <label for="password">Password</label>
+          <input type="password" id="password" value="" size="30" maxlength="40" />
+          <br /><br />
+
+          Radio Buttons: <br />
+          <label for="favorite-team">Favorite Team</label> <br />
+          <input type="radio" id="team-browns" name="favorite-team" value="browns" checked="checked" />
+          Browns <br />
+          <input type="radio" id="team-buckeyes" name="favorite-team" value="buckeyes" />
+          Buckeyes
+          <br /><br />
+
+          Checkboxes: <br />
+          <label for="sports">Sports</label> <br />
+          <input type="checkbox" id="baseball" value="baseball" />
+          Baseball <br />
+          <input type="checkbox" id="football" value="football" />
+          Football
+          <br /><br />
+
+          List Box: <br />
+          <select id="age">
+            <option value="25" selected="selected">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+          </select>
+          <br /><br />
+
+          Text Area: <br />
+          <textarea  id="comments"  name="comments"  cols=”100” rows=”150”>Type Here...</textarea>
+          <br /><br />
+
+          Hidden Fields: <br />
+          <input type="hidden" id="secret" value="secret" />
+          <br /><br />
+
+          Buttons: <br />
+          Button
+          <input type="button" id="regular-button" name="regular-button" value="Press me!" />
+          <br />
+          Submit Button
+          <input type="submit" id="submit-button" name="submit-button" value="Submit me!" />
+          <br />
+          Reset Button
+          <input type="reset" id="reset-button" name="reset-button" value="Reset me!" />
+          <br /><br />
+
+          File Field: <br />
+          <input type="field" id="file-field" name="file-field" size="30" />
+          <br /><br />
+        </form>
+        <br /><br />
+
+        Legend: <br />
+        <legend>Legend Here</legend>
+        <form action="url_to_send_data" method="post">
+          <input type="text" id="first-name" value="" size="30" maxlength="40" />
+        </form>
+        <br /><br />
+
+        Fieldset: <br />
+        <form action="url_to_send_data" method="post">
+          <fieldset>
+            <input type="text" id="first-name" value="" size="30" maxlength="40" />
+            <br />
+            <input type="text" id="last-name" value="" size="30" maxlength="40" />
+          </fieldset>
+        </form>
+        <br /><br />
+      </div>
+      <hr />
+
+      <div id="accessibility-section">
+        <h3 class="section-title">Accessibility</h3>
+        TabIndex and Accesskey: <br />
+        &lt;input tabindex="3" accesskey="F" />
+      </div>
+      <hr />
+
+    </div>
   </body>
 </html>
