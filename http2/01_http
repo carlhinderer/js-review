@@ -414,8 +414,103 @@ CHAPTER 1 - HTTP
         headers were other new additions.
 
 
+    - HTTP headers that aren't compeletely standardized have also been used over the years.
+        Many of these begin with an 'X-' to indicate they aren't formally standardized:
+
+        X-Content-Type
+        X-Frame-Options
+        X-XSS-Protection
+
+
 
 - Introduction to HTTPS
 
+    - HTTPS is the secure version of HTTP that encrypts messages in transit by using
+        the TLS (Transport Layer Security) protocol.  This ensures that messages
+        cannot be intercepted, read, or altered en route.
+
+      TLS is often also known by its previous incarnation SSL.
+
+
+    - HTTPS adds 3 important concepts to HTTP messages:
+
+        1. Encryption
+             Messages can't be read by third parties while in transit.
+
+        2. Integrity
+             The message hasn't been altered in transit, as the entire encrypted
+               message is digitally signed, and that signature is cryptographically
+               verified before decryption.
+
+        3. Authentication
+             The server is the one you intend to talk to.
+
+
 
 - SSL, TLS, HTTPS, and HTTP
+
+    - SSL was actually invented and owned by Netscape, so it was never a formal
+        standard.
+
+        SSLv1      Internal Netscape only
+        SSLv2      1995
+        SSLv3      1996
+
+
+    - TLS is the standardized version of SSL.
+
+        TLSv1.0    Similar to SSLv3
+        TLSv1.1    2006
+        TLSv1.2    2008
+        TLSv1.3    2018
+
+
+    - SSLv3 was the de facto standard for a long time.  However, in 2014 major
+        vulnerabilities were discovered, and it is no longer supported and cannot
+        be used.
+
+
+    - HTTPS works by using public key encrpytion, which allows servers to provide
+        public keys in the form of digital certificates when users first connect.
+
+      Your browser encrpytes messages by using this public key, which only the
+        server can decrpyt, as only it has the corresponding private key.
+
+      This system allows you to communicate securely with a website without having
+        to know a secret shared key in advance.
+
+
+    - The digital certificates are issued, and digitally signed, by various CAs 
+        trusted by the browser, which is why it's possible to authenticate that the 
+        public key is for the server you are connecting to.
+
+
+    - When the client connects to an HTTPS server, it goes through the TLS Handshake,
+        in which:
+
+        1. The server provides the public key
+
+        2. The client and server agree on the encryption methods to use
+
+        3. The client and server negotiate a shared encryption key to use in the future.
+             This is necessary, since public key cryptography is slow, so it is only
+             used to negotiate a shared secret.
+
+
+      After the HTTPS session is set up, standard HTTP messages are exchanged.  The client
+        and server encrypt these messages before sending and decrypt upon receipt.  
+
+
+
+- OpenSSL
+
+    - For web servers using HTTPS, we can't use Telnet to send HTTP requests. 
+        We need a client that can understand HTTPS and do the encryption and
+        decrpytion.  The OpenSSL 's_client' command can be used to do this.
+
+        openssl s_client -crlf -connect www.google.com:443 -quiet
+        GET / HTTP/1.1
+        Host: www.google.com
+        
+        HTTP/1.1 200 OK
+        ...etc.
