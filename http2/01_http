@@ -319,12 +319,103 @@ CHAPTER 1 - HTTP
 
 - HTTP/1.1
 
+    - The HTTP/1.1 standard (1997, updated in 1999 and 2014) included new features 
+        such as:
+
+        - Mandatory Host Headers
+        - Persistent Connections
+        - Better Caching Options
+        - Chunked Encoding
+
+      Many of the new features used HTTP headers.
+
+
+
 - Mandatory Host Header
+
+    - When HTTP was created, it was assumed that a web server would host only a
+        single website.  Thus, the host was implied.  Nowadays, one web server may
+        host many domains, so we have to tell the server which site we want with
+        the 'Host' header.
+
+      They could have required fully-qualified URLs in the request line itself, but
+        there was concern that change would break a lot of existing code.
+
+        GET / HTTP/1.1
+        Host: www.google.com
+
+
+    - Technically, this header is required, but many web servers will still respond
+        if it's missing.  Requiring this header caused a lot of hardware and IP 
+        addresses to be saved!
+
+
 
 - Persistent Connections
 
+    - Initially, HTTP was a single-request-and-response protocol.  The connection
+        was closed after the response was received.  As the web became more media-rich,
+        closing the connection after each request proved to be wasteful.
+
+      The problem was resoleved with a new 'Connection' HTTP header.  If the value
+        'Keep-Alive' was set in this header, the client is asking the server to keep
+        the connection open for additional requests:
+
+        GET /page.html HTTP/1.0
+        Connection: Keep-Alive
+
+
+    - The server would respond with 'Connection: Keep-Aive' if it supports persistent
+        connections.
+
+        HTTP/1.0 200 OK
+        Date: Sun, 25 Jun 2017 13:30:24 GMT
+        Connection: Keep-Alive
+        Content-Type: text/html
+        Content-Length: 12345
+        Server: Apache
+        
+        <!doctype html>
+        <html>
+        <head>
+        ...etc.
+
+
+    - Note the client needs to know when the request is completed so that the client can
+        close the connection.  The 'Content-Length' header is used for this purpose.
+
+
+    - HTTP/1.1 made this setting the default, so HTTP/1.1 connections can be assumed
+        to be persistent.
+
+
+
 - Other New Features
 
+    - HTTP/1.1 also introduced the new methods:
+
+        PUT
+        OPTIONS
+        CONNECT
+        TRACE
+        DELETE
+
+
+    - HTTP/1.1 included better caching methods. These methods allowed the server to 
+        instruct the client to store the resource (such as a CSS file) in the browser’s 
+        cache so it could be reused later if required. The 'Cache-Control' HTTP header 
+        introduced in HTTP/1.1 had more options than the 'Expires' header from HTTP/1.0. 
+
+
+    - HTTP cookies were created to allow HTTP to move from being a stateless protocol.
+
+
+    - New character sets, proxy support, authentication, new status codes, and trailing
+        headers were other new additions.
+
+
+
 - Introduction to HTTPS
+
 
 - SSL, TLS, HTTPS, and HTTP
