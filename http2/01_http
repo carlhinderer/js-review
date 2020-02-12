@@ -226,6 +226,72 @@ CHAPTER 1 - HTTP
 
 
 
+- HTTP/1.0 Response Codes
+
+    Category                Value      Description          Details
+    ----------------------------------------------------------------------------------------------
+    1xx (informational)     N/A        N/A                  HTTP/1.0 doesn’t define any 1xx 
+                                                              status codes, but does define 
+                                                              the category.
+
+    2xx (successful)        200        OK                   This code is the standard response 
+                                                              code for a successful request.
+
+                            201        Created              This code should be returned for a 
+                                                              POST request.
+
+                            202        Accepted             The request is being processed but 
+                                                              hasn’t completed processing yet.
+
+                            204        No content           The request has been accepted and 
+                                                              processed, but there’s no BODY 
+                                                              response to send back.
+
+    3xx (redirection)       300        Multiple choices     This code isn’t used directly. It 
+                                                              explains that the 3xx category implies 
+                                                              that the resource is available at one 
+                                                              (or more) locations, and the exact response 
+                                                              provides more details on where it is.
+
+                            301        Moved permanently   The Location HTTP response header should 
+                                                             provide the new URL of the resource.
+
+                            302        Moved temporarily   The Location HTTP response header should 
+                                                             provide the new URL of the resource.
+
+                            304        Not modified        This code is used for conditional responses 
+                                                             in which the BODY doesn’t need to be sent 
+                                                             again.
+
+    4xx (client error)      400        Bad request         The request couldn’t be understood and should 
+                                                             be changed before resending.
+
+                            401        Unauthorized        This code usually means that you’re not 
+                                                             authenticated.
+
+                            403        Forbidden           This code usually means that you’re 
+                                                             authenticated, but your credentials don’t 
+                                                             have access.
+
+                            404        Not found           This code is probably the best-known HTTP 
+                                                             status code, as it often appears on error 
+                                                             pages.
+
+    5xx (server error)      500        Internal server error   The request couldn’t be completed due to 
+                                                                 a serverside error.
+
+                            501        Not implemented     The server doesn’t recognize the request 
+                                                             (such as an HTTP method that hasn’t yet been
+                                                             implemented).
+
+                            502        Bad gateway         The server is acting as a gateway or proxy and 
+                                                             received an error from the downstream server.
+
+                            503        Service unavailable     The server is unable to fulfill the request, 
+                                                                 perhaps because the server is overloaded 
+                                                                 or down for maintenance.
+
+
 
 - HTTP/1.0 Response Headers
 
