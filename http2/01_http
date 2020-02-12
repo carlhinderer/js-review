@@ -1,0 +1,99 @@
+------------------------------------------------------
+CHAPTER 1 - HTTP
+------------------------------------------------------
+
+- Tim Berners-Lee created 3 components when he defined the web:
+
+    1. HTML
+    2. HTTP
+    3. URLs
+
+
+
+- Protocol Stack
+
+    IP = used to direct traffic through the internet
+    TCP = makes connection reliable by adding stability and retransmission
+
+
+
+- HTTP Request Overview
+
+    1. We type 'www.google.com' into the address bar of our web browser.  Note that
+         our web browser automatically changes this to 'http://www.google.com:80',
+         with the protocol and port specified.
+
+       A DNS request is sent, which returns the IP address of the site (could be IPv4
+         or IPv6).  Many large sites have servers all over the world, and the server
+         closest to your location is reserved.
+
+
+    2. Our web browser asks our computer to open a TCP connection to the IP address
+         using either Port 80 or Port 443.
+
+
+    3. Once the browser has a connection to the web server, it can start asking for the
+         website using the HTTP protocol.  The HTTP request is sent to the server.
+
+
+    4. The website responds with the document at the URL you requested.  Typically, 
+         the document is HTML.  In other cases, 301 or 404 responses might be returned.
+
+
+    5. The web browser processes the returned response.  If the returned response is
+         HTML, the browser starts to parse the HTML and builds the in-memory DOM.
+         During this processing, the browser sees other resources (CSS, Javascript, images)
+         that it needs to display the page properly.
+
+
+    6. The web browser requests any additional resources it needs.  The average website
+         requires 75 additional resources!
+
+
+    7. When the browser has enough critical resources, it starts to render the page on
+         screen.  This requires care, because you don't want to make the user wait for
+         every resource before you display the page.  However, if you don't have enough
+         resources, elements will be jumping around the page.
+
+
+    8. After the initial display of the page, the web browser continues to download other
+         resources that the page needs and updates the page as it processes them.  These
+         resources include nonciritical items such as images and advertising tracking scripts.
+
+
+    9. When the page is fully loaded, the browser stops the loading icon (usually in the address
+        bar), and fires the 'OnLoad JavaScript' event, which JavaScript code may then use as a 
+        sign that the page is ready to perform certain actions.
+
+
+    10. At this point, the page is fully loaded, but the browser hasn't stopped sending out 
+         requests.  Most web pages are now feature-rich applications that continually communicate
+         with various servers to load additional content.
+
+
+
+- OSI Model
+
+    Layer 7 = Application Layer
+                HTTP
+
+    Layer 6 = Presentation Layer
+                File format (ASCII, UTF-8, JPG, PNG, ...)
+
+    Layer 5 = Session Layer
+                SSL/TLS
+
+    Layer 4 = Transport Layer
+                TCP
+
+    Layer 3 = Network Layer
+                IP
+
+    Layer 2 = Data Link Layer
+                Ethernet
+
+    Layer 1 = Physical Layer
+                Cable / Wifi / Mobile
+
+
+
