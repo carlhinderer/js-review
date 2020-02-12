@@ -97,3 +97,84 @@ CHAPTER 1 - HTTP
 
 
 
+- Telnet Example
+
+    - This is the basic syntax of an HTTP request, after you open a connection:
+
+        GET /page.html↵
+
+
+    - To illustrate, we can open a telnet session to a website, then send an HTTP
+        request:
+
+          # Create connection to server
+          $ telnet www.google.com 80
+      
+          Trying 172.217.3.196...
+          Connected to www.google.com.
+          Escape character is '^]'.
+      
+      
+          # Now, send HTTP request
+          GET /
+      
+          HTTP/1.0 200 OK
+          Date: Sun, 10 Sep 2017 16:20:09 GMT
+          Expires: -1
+          Cache-Control: private, max-age=0
+          Content-Type: text/html; charset=ISO-8859-1
+          P3P: CP="This is not a P3P policy! See
+               https://www.google.com/support/accounts/answer/151657?hl=en for more info."
+          Server: gws
+          X-XSS-Protection: 1; mode=block
+          X-Frame-Options: SAMEORIGIN
+          Set-Cookie:
+                NID=111=QIMb1TZHhHGXEPjUXqbHChZGCcVLFQOvmqjNcUIejUXqbHChZKtrF4Hf4x4DVjTb01R
+                8DWShPlu6_aQ-AnPXgONzEoGOpapm_VOTW0Y8TWVpNap_1234567890-p2g; expires=Mon,
+                12-Mar-2018 16:20:09 GMT; path=/; domain=.google.com; HttpOnly
+          Accept-Ranges: none
+          Vary: Accept-Encoding
+          
+          <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage"
+               lang="en"><head><meta content="Search the world's information, including
+               webpages, images, videos and more. Google has many special features to help
+               you find exactly what you're looking for." name="description
+          
+          ...etc. (Most HTML omitted)
+          
+          </script></div></body></html>Connection closed by foreign host.
+
+
+    - As we see at the end of each example, the connection is closed.  To send another
+        HTTP request, we need to reopen the connection.  To avoid this step, we can use
+        HTTP/1.1 (which keeps the connection open by default).  
+
+      Here is a HTTP/1.1 request (a second carriage return is required).
+
+        GET / HTTP/1.1↵↵
+
+
+
+- HTTP/0.9
+
+- HTTP/1.0
+
+- HTTP/1.0 Methods
+
+- HTTP/1.0 Request Headers
+
+- HTTP/1.0 Response Codes
+
+- HTTP/1.0 Response Headers
+
+- HTTP/1.1
+
+- Mandatory Host Header
+
+- Persistent Connections
+
+- Other New Features
+
+- Introduction to HTTPS
+
+- SSL, TLS, HTTPS, and HTTP
