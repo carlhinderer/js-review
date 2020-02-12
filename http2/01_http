@@ -157,15 +157,99 @@ CHAPTER 1 - HTTP
 
 - HTTP/0.9
 
+    - This was the first specification, released in 1991 by Tim Berners-Lee.  There is only
+        a single command, and that command is a single ASCII line.  
+
+      Only GET requests are allowed, so all of them are expected to be idempotent.
+
+        GET /section/page.html↵
+
+
+
 - HTTP/1.0
+
+    - In 1996, a new standard was gradually evolved to reflect the various changes
+        other web servers had already been making.
+
+        - HEAD and POST request methods were added
+        - Adding the HTTP version number to all messages
+        - HTTP headers on requests and responses
+        - 3 digit response codes
+
+
 
 - HTTP/1.0 Methods
 
+    HEAD  =  allows the client to get all the meta information (such as HTTP headers)
+               for a resource without downloading the resource itself
+
+    POST  =  allows the client to send data back to the web server
+
+    GET   =  data can be sent to server in query string, but this data should only be
+               something that alters the results (and all GET requests should be 
+               idempotent)
+
+
+
 - HTTP/1.0 Request Headers
 
-- HTTP/1.0 Response Codes
+    - HTTP headers are provided on separate lines after the original request line.
+
+        GET /page.html HTTP/1.0↵
+        Header1: Value1↵
+        Header2: Value2↵
+        ↵
+
+
+    - Here is a typical HTTP/1.0 GET request:
+
+        GET /page.html HTTP/1.0↵
+        Accept: text/html,application/xhtml+xml,image/jxr/,*/*↵
+        Accept-Encoding: gzip, deflate, br↵
+        Accept-Language: en-GB,en-US;q=0.8,en;q=0.6↵
+        Connection: keep-alive↵
+        Host: www.example.com↵
+        User-Agent: MyAwesomeWebBrowser 1.1↵↵
+
+
+       Here is a typical response:
+
+         HTTP/1.0 200 OK
+         Date: Sun, 25 Jun 2017 13:30:24 GMT
+         Content-Type: text/html
+         Server: Apache
+         
+         <!doctype html>
+         <html>
+         <head>
+         ...etc.
+
+
+
 
 - HTTP/1.0 Response Headers
+
+    - Response headers follow the same format as request headers:
+
+        GET /
+        HTTP/1.0 302 Found
+        Location: http://www.google.ie/?gws_rd=cr&dcr=0&ei=BWe1WYrf123456qpIbwDg
+        Cache-Control: private
+        Content-Type: text/html; charset=UTF-8
+        Date: Sun, 10 Sep 2017 16:23:33 GMT
+        Server: gws
+        Content-Length: 268
+        X-XSS-Protection: 1; mode=block
+        X-Frame-Options: SAMEORIGIN
+        <HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8
+        ">                                                                         
+            <TITLE>302 Moved</TITLE></HEAD><BODY>
+                                           <H1>302 Moved</H1>
+                                                             The document has moved
+        <A HREF="http://www.google.ie/?gws_rd=cr&amp;dcr=0&amp;ei=BWe1WYrfIojUgAbqpI
+        bwDg">here</A>.</BODY></HTML> Connection closed by foreign host.
+
+
 
 - HTTP/1.1
 
