@@ -1,0 +1,128 @@
+-----------------------------------------------------------------------
+|  CHAPTER 3 - SEO: TITLE & META                                      |
+-----------------------------------------------------------------------
+
+- Important for SEO
+
+    1. <title> tag
+    2. <meta> tags
+    3. <base> tag
+    4. <p> and <h> tags with actual content
+
+
+
+- The <title> Tag
+
+    <head>
+        <title>Title, Using Important Search Term Keywords</title>            
+    </head>
+
+
+
+- The <meta> Tag
+
+    - Standard metadata information included for SEO:
+
+        <html lang="en">
+            <head>
+                <title>iTV Clocks for iTV Sets | 3D Watch Faces for iTV Sets</title>
+    
+                <meta name="description" content="Use your iTV Set as a Clock!">
+                <meta name="keywords" content=" iTV Clock, iTV Set, Watch Faces">
+                <meta name="robots" content="index, follow">
+                <meta name="copyright" content="Copyright 2014 through 2016">
+                <meta name="author" content="Wallace Jackson">
+                <meta charset="UTF-8">
+            </head>
+
+
+    - List of <meta> Data Value Pairs
+
+        Name             Content                  Purpose or Usage
+        --------------------------------------------------------------------------------
+        description      A document description   Search engine listing description content control      
+
+        keywords         Your keyword list        SEO keyword suggestions
+
+        robots           index and follow         SEO robot instructions
+
+        copyright        Copyright dates          Document copyright dates
+
+        author           Author name              Document author(s) names
+
+        webauthor        Author name              Document author(s) names
+
+        charset          Character set used       Generally UTF-8 or UTF-16
+
+        abstract         Document summary         Abstract of content summary
+
+        revisit-after    Period (i.e., 9 days)    Robot revisit instructions
+
+        language         Name of language         Language used for document
+
+        distribution     global, local, IU        Global, local or internal distribution for document
+
+        expires          Date (1 Jan 2017)        Document content expiration
+
+        generator        Name of software         Document content generator
+
+        reply-to         E-mail address           Document contact information
+
+        no-email-collection   An anti-spam link   metatags.info/nospamharvest
+
+        rating           Intended audience        general, mature, restricted
+
+        googlebot        noodp                    Use page description in ODP
+
+
+
+    - We can also use the 'http-equiv' parameter to define your HTTP header for the
+        values of your content parameter.
+
+        <!-- Specify charset the HTML4 way -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+
+      This metatag is used to add certain non-standard values to the website header.
+
+
+    - List of http-equiv <meta> Data Value Pairs
+
+        http-equiv            Content Value           Purpose or Usage
+        ------------------------------------------------------------------------------
+        content-type          Media Type, CharSet     Define MIME type and charset
+
+        cache-control         Set cache settings      Defines caching parameters
+
+        cookie                Defines cookie file     Define cookie name and dates
+
+        content-disposition   Define applications     Defines file name extension
+
+        imagetoolbar          Shows image toolbar     Control display (IE) toolbar
+
+        MSThemeCompatible     Use WinXP UI theme      Sets WinXP UI theme for site
+
+        picslabel             Label image content     Allows imagery to be labeled
+
+        pragma                Sets HTTPS caching      Ensure HTTPS page not cached
+
+        Resource-Type         Defines resources       Define a page resource type
+
+        refresh               Time before refresh     Redirect after a time period
+
+        Content-Script-Type   Scripting language      Define a scripting language
+
+        Content-Style-Type    Style Sheet language    Define a style sheet language
+
+        window-target         Specify window name as  Generally used to break out of a frameset
+                                a window target 
+
+
+
+- The <base> Tag
+
+    The <base> tag is used to define the default target parameter for all links in the
+      document.  There can only be a single base tag defined.
+
+      <head>
+          <base href="http://www.iTVclock.com">
+      </head>
