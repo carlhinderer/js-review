@@ -1,0 +1,123 @@
+-----------------------------------------------------------------------
+|  CHAPTER 4 - EXTERNAL LINKS & FAVICONS                              |
+-----------------------------------------------------------------------
+
+- The <link> Tag
+
+    - The <link> tag allows assets defined in external files to be "linked" to an HTML
+        document, such as favicons and stylesheets.
+
+      If you externalize an asset as a file in an HTML5 document, that document is cached
+        and only needs to be loaded once.
+
+
+    - The only required attribute is the 'rel' attribute, which specifies which type of
+        document is linked.  
+
+        Rel Parameter Value       Rel Parameter Value Purpose
+        --------------------------------------------------------------------------------
+        alternate                 Link to an alternate version of the document
+
+        author                    Link to put Author Profile in search results
+
+        help                      Link to the help document for the HTML document
+
+        icon                      Link external icon (.ICO) resource for document
+
+        license                   Link to the copyright information for document
+
+        next                      Link to next document in a series of documents
+
+        prefetch                  Link to a target resource that should be cached
+
+        prev                      Link to a previous document in a series of docs
+
+        search                    Link to a search tool for the document
+
+        stylesheet                Link to an external cascading style sheet (.css) 
+
+
+
+- Adding a favicon
+
+    - To add a favicon:
+
+        <head>
+            <link rel="icon" href="itvclock.ico">
+        </head>
+
+
+    - The icon must be:
+        - 64 pixels
+        - square
+        - 8-, 24-, or 32-bit color
+
+
+
+- Adding a Stylesheet
+
+    - To add a stylesheet:
+
+        <head>
+            <link rel="stylesheet" type="text/css" href="itvclock.css">
+        </head>
+
+
+    - Note that the tag needs to be closed for the HTML to be XHTML-compliant.
+
+        <head>
+            <link rel="stylesheet" type="text/css" href="itvclock.css" />
+        </head>
+
+
+    - To add a style sheet for printed media, the 'media' paremeter is added to the <link>
+        tag.
+
+        <link rel="stylesheet" type="text/css" href="itvclock.css"  media="print"/>
+
+      The possible values for the media tag:
+          - screen (default)
+          - braile
+          - tty
+          - aural
+          - printer
+          - projection
+          - tv
+          - handheld
+
+
+
+- Linking to an Author Profile
+
+    - With HTML5, the <link> tag can be used to reference an author profile.  This is 
+        particularly important for search index linking.
+
+        <link rel="author"                                                                              
+           href="https://plus.google.com/u/0/+WallaceJackson/about/p/pub"
+           title="Wallace Jackson">
+
+
+
+- Optional Link Tag Parameters
+
+    Parameter Name     HTML5 Support         Parameter Purpose or Usage
+    -------------------------------------------------------------------------------------
+    href               Yes                   Location (URL) for the linked asset
+
+    hreflang           Yes                   The language used in a linked asset
+
+    rel                Yes                   Relationship (type) of linked asset
+
+    media              Yes                   Device type needed for linked asset
+
+    type               Yes                   Media type used by the linked asset
+
+    sizes              Yes                   Pixel size of a linked icon resource
+
+    crossorigin        Yes                   Specify cross-origin request handling
+
+    rev                No                    Relationship between linked documents
+
+    charset            No                    Character encoding of a linked asset
+
+    target             No                    Where a linked asset is to be loaded
