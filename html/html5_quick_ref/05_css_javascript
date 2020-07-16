@@ -1,0 +1,118 @@
+-----------------------------------------------------------------------
+|  CHAPTER 5 - CSS & JAVASCRIPT                                       |
+-----------------------------------------------------------------------
+
+- The <script> Tag
+
+    - To add a JavaScript file to the web page:
+
+        <!-- HTML 4 -->
+        <script src="itvclock.js" type="text/javascript" />
+
+        <!-- HTML 5 -->
+        <script src="itclock.js">
+
+
+    - Parameters for the script tag
+
+        Script Parameter     Script Parameter Purpose
+        ----------------------------------------------------------------------
+        src                  Specify the URL for an external JavaScript file
+
+        type                 Specify optional media type for external JS file
+
+        charset              Specify character encoding for external JS file
+
+        defer                Specifies to execute scripts after HTML parsing
+
+        async                Specified to execute scripts asynchronously
+
+        xml:space            Specifies whether white space in code should be preserved. This is 
+                               not supported in HTML5.
+
+
+
+- Deferring JS Processing with the 'defer' Parameter
+
+    - By default, the external JS files are downloaded and executed immediately, before the
+        body of the document.
+
+      To process the JS after rendering the document, use the 'defer' parameter.
+
+      To process the JS and render the document at the same time, use the 'async' parameter.
+
+
+    - To defer the processing:
+
+        <!-- HTML 4 -->
+        <script src="itvclock.js" type="text/javascript" defer="defer" />
+
+        <!-- HTML 5 -->
+        <script src="itvclock.js" defer="defer">
+
+
+    - To load the JS and render the document in parallel:
+
+        <!-- HTML 4 -->
+        <script src="itvclock.js" type="text/javascript" async="async" />
+
+        <!-- HTML 5 -->
+        <script src="itvclock.js" async="async">
+
+
+
+- Using a Different JS Character Set with the 'charset' Parameter
+
+    - We can specify the character set manually if it is different in the JS file and the
+        HTML5 document.
+
+        <head>
+            <meta charset="UTF-16">
+            <script src="itvclock.js" type="text/javascript" charset="UTF-8" />
+        </head>
+
+
+
+- The <noscript> Tag
+
+    - The <noscript> tag should always be added if you are using the <script> tag.  However,
+        it is rarely used.
+
+        <head>
+            <noscript>No JavaScript Support; Please Enable JavaScript!</noscript>
+        </head>
+
+
+
+- Using Script Tags Internally
+
+    - To add JS code directly in the HTML page:
+
+        <head>
+            <script>            
+                Document.getElementById("JSapp").innerHTML="Hello World JavaScript";
+            </script>            
+        </head>
+
+
+
+- The <style> Tag
+
+    - To define a style inline:
+
+        <head>
+            <style type=text/css>
+                h1 { color: green; }
+            </style>
+        </head>
+
+
+    - Style tag parameters
+
+        Parameter Name       New in HTML5?       Parameter Purpose or Usage
+        -------------------------------------------------------------------------------------
+        scoped               Yes                 Style is locally scoped (to parent and children only)
+
+        media                No                  Media/device style is targeted at
+
+        type                 No                  Media type specification of style tag
