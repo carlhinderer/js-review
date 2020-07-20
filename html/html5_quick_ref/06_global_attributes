@@ -1,0 +1,206 @@
+-----------------------------------------------------------------------
+|  CHAPTER 6 - USING GLOBAL TAG ATTRIBUTES                            |
+-----------------------------------------------------------------------
+
+- HTML Global Parameters Across All Tags
+
+    Global Parameter        Global Parameter Purpose
+    -------------------------------------------------------------------------------
+    contenteditable         Specify if an element content is editable or not
+
+    contextmenu             Specify context menu for the HTML5 element (tag)
+
+    data-<attribute>        Specify custom data attributes for your document
+
+    draggable               Specifies if an element is draggable (or is not)
+
+    dropzone                Specifies a drop processing (copy, move or link)
+
+    hidden                  Specify visibility (relevancy) for each element
+
+    spellcheck              Specify spelling and grammar check for elements
+
+    translate               Specifies to execute scripts after HTML parsing
+
+    accesskey               Specify a keystroke shortcut to focus an element
+
+    class                   Specify a classname for element in a style sheet
+
+    dir                     Specify a text reading direction for an element
+
+    id                      Specify a unique ID for element in a style sheet
+
+    lang                    Specify the language used for that element
+
+    style                   Allows in-line CSS Style declaration for element
+
+    tabindex                Specifies the tabbing order for that element
+
+    title                   Specifies extra information regarding an element
+
+
+
+- Advanced HTML5 Attributes
+
+    - The CONTENTEDITABLE Parameter
+
+        This option sets whether a user can edit the content inside an element.
+
+        <p contenteditable="true">Go ahead, edit this text if you're so inclined</p>
+
+
+    - The CONTEXTMENU Parameter
+
+        This option sets whether a user can open a context-sensitive menu by right-clicking
+          the content inside of the element.
+
+        <div contextmenu="divmenu">
+            <menu id="divmenu" type="context">
+                <menuitem label="Menu Option 1"></menuitem>
+                <menuitem label="Menu Option 2"></menuitem>
+                <menuitem label="Menu Option 3"></menuitem>
+            </menu>
+        </div>
+
+
+    - The DATA- Parameter
+
+        This attribute allows you to specify custom private data type definitions to
+          contain inside the element.
+
+        <div contextmenu="carmenu">
+            <menu id="carmenu" type="context">
+                  <menuitem data-car="german"   label="Mercedez Benz"></menuitem>     
+                  <menuitem data-car="italian"  label="Lamborghini"></menuitem>     
+                  <menuitem data-car="american" label="Corvette"></menuitem>     
+            </menu>
+        </div>
+
+
+    - The DRAGGABLE Parameter
+
+        This attribute allows you to specify whether the user can drag the content inside the
+          tag on a display screen.
+
+        <p draggable="true">You're able to drag this paragraph around the screen</p>
+
+
+    - The DROPZONE Parameter
+
+        This attribute allows you to specify the action that is implemented once the user
+          drags content into the place on the screen.  The 3 options for dropzone are
+          'move', 'copy', and 'link'.
+
+        <div dropzone="move">Content Child Elements/Tags will be in here</div>
+        <div dropzone="copy">Content Child Elements/Tags will be in here</div>
+        <div dropzone="link">Content Child Elements/Tags will be in here</div>
+
+
+    - The HIDDDEN Parameter
+
+        This attribute allows you to specify whether you want your element to be hidden from 
+          view.
+
+        <p hidden>This paragraph will be hidden from the user's view</p>
+
+
+    - The SPELLCHECK Parameter
+
+        This attribute allows you to specify whether you want your text-based elements to have
+          the spell-checking feature enabled.
+
+        <p contenteditable="true" spellcheck="true">Paragraph with spellchecking</p>
+
+        
+    - The TRANSLATE Parameter
+
+        This attribute allows you to specify whether you want your text-sized elements to
+          be translated into different languages.
+
+        <p>This Paragraph Will Be Translated by Default, to Localize the Content</p>
+        <p translate="yes">This Paragraph WILL Be Translated, for Localization.</p>
+
+        <p translate="no">This Paragraph Will NOT Be Translated or Localized</p>
+
+
+
+- Pre-HTML5 Global Parameters: Legacy Attributes That Are Still Around
+
+    - The ACCESSKEY Parameter
+
+        This attribute allows you to specify a keyboard shortcut for your elements.
+
+        <a href="http://www.Apress.com" accesskey="p">Publisher Website</a> <br>
+        <a href="http://www.WallaceJackson.com" accesskey="a">Author Website</a>
+
+
+    - The CLASS Parameter
+
+        This attribute allows you to specify a classname for your tags.
+
+        <!-- Class definition -->
+        <head>
+            <style>
+                p.coloredtext { color: red; }  <!-- CSS to set the p color to red -->
+            </style>
+        </head>
+
+        <!-- Use the class -->
+        <p class="coloredtext">This text will be displayed in a Red color.</p>
+
+
+    - The DIR Parameter
+
+        This attribute allows you to specify the direction you want text-based elements to
+          be read.
+
+        <p dir="rtl">This Paragraph Will Be Written from the Right To the Left!</p>
+
+
+    - The ID Parameter
+
+        This attribute allows you to specify an id to use as a handle.  The 
+          'document.getElementById()' function can be used to access the element in scripts.
+
+        <body>
+            <!-- Create element -->
+            <p id="helloworld">Click this button to change to: Hello World!</p>
+            <button onclick="HelloWorldFunction()">Change Text, Please!</button>
+
+            <!-- Use the handle -->
+            <script>
+               function HelloWorldFunction() {
+                  document.getElementById("helloworld").innderHTML = "Hello World";
+               }
+            </script>
+        </body>
+
+
+    - The LANG Parameter
+
+        This attribute allows you to specify the language used in text-based elements.
+
+        <p lang="es">Buenos Dias, Compadres!</p>
+
+
+    - The STYLE Parameter
+
+        This attribute allows you to specify inline CSS styles on an element.
+
+        <p style="color:green">This text will now use the green color!</p>
+
+
+    - The TABINDEX Parameter
+
+        This attribute allows you to specify a tab key order for your tags.
+
+        <a href="http://www.Apress.com" tabindex="2">Publisher's Website</a>
+        <a href="http://www.WallaceJackson.com" tabindex ="1">Author's Website</a>
+        <a href="http://www.Luv2Code.com" tabindex ="3">Tech Reviewer Website</a>
+
+
+    - The TITLE Parameter
+
+        This attribute is used to display tooltips when you mouse over an element.
+
+        <p title="This will display on Mouse-Over">Mouse-Over Text for Tool Tip!</p>
