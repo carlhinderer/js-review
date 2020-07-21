@@ -1,0 +1,115 @@
+-----------------------------------------------------------------------
+|  CHAPTER 8 - MULTIMEDIA                                             |
+-----------------------------------------------------------------------
+
+- HTML5 New Media Support
+
+    - Nine HTML5 Media Genres
+
+        New Media Asset       Supported Data Formats
+        ----------------------------------------------------------------------------
+        Digital Imagery       JPEG, GIF, PNG8, PNG24, PNG32, WebP, BMP, PDF
+
+        Digital Audio         MP3, OGG Vorbis, WAVE, AIFF, MPEG-4, OPUS, FLAC
+
+        Digital Video         MPEG-4 AVC H.264, MPEG-H EVC H.265, WebM VP8/VP9
+
+        Digital Illustration  SVG (Scalable Vector Graphic)(also used via CSS)
+
+        Interactive 3D        WebGL or WebGL2 (<canvas> covered in Chapter 17)
+
+        Digital Painting      SVG, JPEG, GIF, PNG (8/24/32), WebP, WebM, MPEG
+
+        Visual FX (VFX)       Above Formats combined together using JavaScript
+
+        Speech Recognition    Recognizes Speech; Converts to Text (Web Speech)
+
+        Speech Synthesis      Synthesizes Speech, Using Text (Web Speech API)
+
+
+
+- The <img> Tag
+    
+    - Here are the attributes supported by the 'img' tag:
+
+        IMG Tag Parameter        IMG Tag Parameter Purpose
+        ------------------------------------------------------------------------------
+        src                      A digital image asset source file name reference
+  
+        alt                      Alternate text description of image used for SEO
+  
+        crossorigin              Cross-origin access control for third-party site
+  
+        height                   Height (in pixels) to display the image
+  
+        width                    Width (in pixels) to display the image
+  
+        longdesc                 URL for a detailed description of image
+  
+        usemap                   Specify image as a client-side image map
+  
+        ismap                    Specify image as a server-side image map
+  
+        align                    Specify the alignment of image to other elements
+
+        border                   Specify the border width around image
+
+        hspace                   Specify the whitespace width left/right of image
+
+        vspace                   Specify the whitespace width top/bottom of image
+
+
+    - Here is the basic image tag usage.  Using the 'alt' attribute is recommended for search 
+        engine recognition purposes.
+
+      <img src="imagename.jpg" alt="Image Description Using Keywords for SEO" />
+        
+
+    - To resize the image, the 'height' and 'width' attributes can be used.  We should always scale
+        down, not up, and usually by a factor of 2.
+
+      <img src="imgname.jpg" width="400" height="300"/> <!-- Scale Down Image -->
+
+
+    - To allow a digital image asset to be legally accessed from a 3rd party website, we can use
+        the 'crossorigin' parameter.
+
+      <img src="imagename.jpg" crossorigin="use-credentials" />
+
+
+    - To give better information to search engines, the 'longdesc' attribute can be used to point
+        to a keyword-optimized description.
+
+      <img src="imgname.jpg" longdesc="http://www.serverlocation.com/desc.html"/>
+
+
+    - The 'usemap' attribute is used to define a client-side image map.
+
+      <img src="imagename.jpg" usemap="#mapname" width="640" height="480" />
+      <map id="mapname">
+           <area shape="rect" coords="10,10,640,240" href="URL" alt="SEO" />
+           <area shape="circle" coords="320,360,120" href="URL" alt="SEO" />
+      </map>
+
+
+    - If the image map is on the server side, the 'ismap' attribute is used.
+
+      <img src="imagename.jpg" alt="Image Description: SEO Keywords" ismap />
+
+
+
+- The <audio> Tag
+
+
+- The <video> Tag
+
+
+- The <svg> Tag
+
+
+- Other New Media Effects
+
+    - Interactive 3D
+    - Digital Painting using JavaScript
+    - Visual Effects
+    - Web Speech
