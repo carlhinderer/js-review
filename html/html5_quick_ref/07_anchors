@@ -1,0 +1,206 @@
+-----------------------------------------------------------------------
+|  CHAPTER 7 - NAVIGATION: USING ANCHOR TAGS                          |
+-----------------------------------------------------------------------
+
+- The <a> Tag
+
+    - The <a> Tag is used to link to other HTML documents.
+
+        <a href="http://www.Apress.com">Click here to open the Apress website</a>
+
+
+    - List of Anchor Tag Attributes
+
+        Global Parameter      Global Parameter Purpose
+        -----------------------------------------------------------------------
+        download              Specify if an element content is editable or not
+
+        media                 Specify context menu for the HTML5 element (tag)
+
+        href                  Specify custom data attributes for your document
+
+        hreflang              Specifies if an element is draggable (or is not)
+
+        rel                   Specifies a drop processing (copy, move or link)
+
+        target                Specify visibility (relevancy) for each element
+
+        type                  Specify spelling and grammar check for elements
+
+        charset               Specifies to execute scripts after HTML Parsing
+
+        coords                Specify a keystroke shortcut to focus an element
+
+        name                  Allows in-line CSS style declaration for element
+
+        rev                   Specifies the tabbing order for that element
+
+        shape                 Specifies extra information regarding an element
+
+
+
+- Anchor Tag Attributes
+
+    - The HREF Attribute
+
+        The href (or 'hypertext reference') attribute is used to specify a URL for the link.
+
+        <a href="http://www.Apress.com">Click here to open the Apress website</a>
+
+
+    - The HREFLANG Attribute
+
+        This attribute allows you to specify the language used by your hypertext link.
+          The language codes are defined in ISO 639.
+
+        <a href="http://www.Apress.com" hreflang="fr">Bonjour! www.Apress.com</a>
+
+
+    - The DOWNLOAD Attribute
+
+        This attribute tells the HTML5 parser that the file should be downloaded, rather than
+          loaded and parsed.
+
+        <a href="!http://WallaceJackson.com/MT240.gif" download>Download Logo!</a>
+
+
+    - The MEDIA Attribute
+
+        The global 'media' attribute can be used with the anchor tag.
+
+        <a href=http://www.iTVset.com" media="screen">iTV Set - Display: Screen</a>
+
+
+    - The TARGET Attribute
+
+        This attribute allows you to specify the location your application opens your URL in.
+          The options are '_blank', '_self', '_parent', and '_top'.
+
+        <!-- Open link in current tab, this is the default -->
+        <a href=http://iTVset.com" target="_self">Replace this site with iTV Set</a>
+
+        <!-- Open link in new tab -->
+        <a href=http://www.iTVset.com" target="_blank">Open iTV Set in a new Tab</a>
+
+        <!-- Used for frames, rarely used these days -->
+        <a href=http://iTVset.com" target="_parent">Open iTV Set in Parent Frame</a>
+        <a href=http://iTVset.com" target="_top">Open iTV Set in the Full Window</a>
+        <a href=http://iTVset.com" target="framename">Open iTV Set in this Frame</a>
+
+
+    - The REL Attribute
+
+        This attribute allows you to define the relationship that exists between the current
+          document and the link.  Here are the possible values for the 'rel' attribute:
+
+          REL Parameter          REL Parameter Purpose
+          ----------------------------------------------------------------------------
+          alternate              Specifies an alternate version of HTML5 document
+
+          author                 Specifies your author profile for HTML5 document
+
+          bookmark               Specifies permanent URL to bookmark the document
+
+          help                   Specifies the URL (a link) to the help document
+
+          license                Specifies a URL (a link) to a copyright document
+
+          next                   Specifies next document in a series of documents
+
+          nofollow               Specify spelling and grammar check for elements
+
+          noreferrer             Specifies to execute scripts after HTML parsing
+
+          prefetch               Specify a keystroke shortcut to focus an element
+
+          prev                   Allows in-line CSS style declaration for element
+
+          search                 Specifies the tabbing order for that element
+
+          tag                    Specifies extra information regarding an element
+
+
+        <!-- Create an alternate version of a linked document -->
+        <a href=http://www.iTVset.com" rel="alternate">Alternate iTV Version</a>
+
+        <!-- Reference an author profile -->
+        <a href=http://www.WallaceJackson.com" rel="author">Author Website</a>
+
+        <!-- Create a bookmark link for a linked document -->
+        <a href=http://www.iTVset.com" rel="bookmark">Bookmark for iTV Set Site</a>
+
+        <!-- Create a help document for a linked document -->
+        <a href=http://www.iTVset.com" rel="help">iTV Set Website Help Document</a>
+
+        <!-- Create a license document for a linked document -->
+        <a href=http://www.iTVset.com" rel="license">Copyright License Document</a>
+
+        <!-- Designate the next document in a series -->
+        <a href=http://www.iTVset.com" rel="next">The Next Document in a Series</a>
+
+        <!-- Specify to search engines that a link should not be followed -->
+        <a href=http://www.iTVset.com" rel="nofollow">Do Not Follow (Rank) Link</a>
+
+        <!-- Hide the fact that links to another site came from your website -->
+        <a href=http://iTVset.com" rel="noreferrer">No Site Referrer Info Sent</a>
+
+        <!-- Preload a document before it is needed -->
+        <a href=http://www.iTVset.com" rel="prefetch">Prefetch This Document</a>
+
+        <!-- Designate the previous document in a series -->
+        <a href=http://www.iTVset.com" rel="prev">Previous Document in a Series</a>
+
+        <!-- Create a search tool for a document -->
+        <a href=http://www.iTVset.com" rel="search">Custom Search Utility Link</a>
+
+        <!-- Instruct search engines robots that link text is a relevant keyword -->
+        <a href=http://iTVset.com/itv-ebooks" rel="tag">Tag the ebooks keyword</a>
+
+
+    - The TYPE Attribute
+
+        Anchor tags support the definition of a MIME type using the 'type' attribute.
+
+        <a href=http://iTVset.com" type="text/html">iTV Set: An HTML Website!</a>
+
+
+
+- Anchor Tag Legacy Attributes Not Supported in HTML5
+
+    - The CHARSET Attribute
+
+        This attribute specifies the character set used.
+
+        <a href=http://iTVset.com" charset="UTF-8">iTV Set: A UTF-8 Website!</a>
+
+
+    - The COORDS Attribute
+
+        This attribute creates coordinates for an image map.
+
+        <a href=http://iTVset.com" shape="rect" coords="0,0,240,320">Image Map</a>
+
+
+    - The NAME Attribute
+
+        This attribute allows a name to be created for a link.  The 'id' attribute should be
+          used instead.
+
+        <a href=http://www.iTVset.com" name="anchorname">iTV Set Anchor Name</a>
+
+
+    - The REV Attribute
+
+        This attribute was used to create reverse relationships.  It is the opposite of the
+          'rel' attribute.
+
+        <a href=http://www.iTVset.com" rev="alternate">An Opposite of an iTV Set</a>
+
+
+    - The SHAPE Attribute
+
+        This attribute tells the parsing engine the shape (rect or circle) used for the file
+          referenced using an 'href' parameter.  It is used in conjunction with 'coords' to
+          create image maps.
+
+        <a href=http://iTVset.com" shape="circle" coords="0,0,240,320">Image Map</a>
