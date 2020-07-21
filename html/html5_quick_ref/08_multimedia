@@ -62,46 +62,149 @@
     - Here is the basic image tag usage.  Using the 'alt' attribute is recommended for search 
         engine recognition purposes.
 
-      <img src="imagename.jpg" alt="Image Description Using Keywords for SEO" />
+         <img src="imagename.jpg" alt="Image Description Using Keywords for SEO" />
         
 
     - To resize the image, the 'height' and 'width' attributes can be used.  We should always scale
         down, not up, and usually by a factor of 2.
 
-      <img src="imgname.jpg" width="400" height="300"/> <!-- Scale Down Image -->
+        <img src="imgname.jpg" width="400" height="300"/> <!-- Scale Down Image -->
 
 
     - To allow a digital image asset to be legally accessed from a 3rd party website, we can use
         the 'crossorigin' parameter.
 
-      <img src="imagename.jpg" crossorigin="use-credentials" />
+        <img src="imagename.jpg" crossorigin="use-credentials" />
 
 
     - To give better information to search engines, the 'longdesc' attribute can be used to point
         to a keyword-optimized description.
 
-      <img src="imgname.jpg" longdesc="http://www.serverlocation.com/desc.html"/>
+        <img src="imgname.jpg" longdesc="http://www.serverlocation.com/desc.html"/>
 
 
     - The 'usemap' attribute is used to define a client-side image map.
 
-      <img src="imagename.jpg" usemap="#mapname" width="640" height="480" />
-      <map id="mapname">
-           <area shape="rect" coords="10,10,640,240" href="URL" alt="SEO" />
-           <area shape="circle" coords="320,360,120" href="URL" alt="SEO" />
-      </map>
+        <img src="imagename.jpg" usemap="#mapname" width="640" height="480" />
+        <map id="mapname">
+             <area shape="rect" coords="10,10,640,240" href="URL" alt="SEO" />
+             <area shape="circle" coords="320,360,120" href="URL" alt="SEO" />
+        </map>
 
 
     - If the image map is on the server side, the 'ismap' attribute is used.
 
-      <img src="imagename.jpg" alt="Image Description: SEO Keywords" ismap />
+        <img src="imagename.jpg" alt="Image Description: SEO Keywords" ismap />
 
-
+ 
 
 - The <audio> Tag
 
+    - The audio tag is new in HTML5, designed for handling digital audio.  Here are the attributes
+        it supports:
+
+        Audio Tag Parameter          Audio Tag Parameter’s Purpose
+        -----------------------------------------------------------------------------
+        src                          Digital audio asset source file name reference
+
+        controls                     Audio transport UI (user interface) controls
+
+        preload                      Preloads the digital audio file asset
+
+        muted                        Mutes the digital audio asset
+
+        loop                         Loops the digital audio asset
+
+        autoplay                     Automatically play audio on a page load event
+
+        autobuffer                   Automatically buffer audio on page load event
+
+
+    - Using more than one source tag will allow for fallback in case of failure.
+
+        <audio controls>
+             <source src="preferred_audio_codec.ogg" type="audio/ogg" />
+             <source src="second_choice_audio_codec.mp3" type="audio/mp3" />
+             ALERT! Your Browser Does Not Support Audio or the HTML5 Audio Tag!
+        </audio>
+
+
+    - The 'autoplay' attribute is used to autoplay the audio.
+
+        <audio controls autoplay>...
+
+      The 'loop' attribute plays the audio in a loop.
+
+        <audio controls loop>...
+
+
+    - The 'preload' attribute is used to preload an audio asset.
+
+        <audio controls preload="auto">...
+
+      To preload the audio metadata only:
+
+        <audio controls preload="metadata">...
+
+      To prevent any preloading:
+
+        <audio controls preload="none">...
+
+
 
 - The <video> Tag
+
+    - The video tag is new in HTML5, designed for handling digital video.  Here are the attributes
+        it supports:
+
+        Video Tag Parameter           Video Tag Parameter’s Purpose
+        -------------------------------------------------------------------------------------
+        src                           Digital video asset source file name reference
+
+        width                         Digital video asset width in pixels
+
+        height                        Digital video asset height in pixels
+
+        controls                      Video transport UI (user interface) controls
+
+        preload                       Preload the digital video file asset
+
+        muted                         Mutes the digital video asset
+
+        poster                        Digital image to use as a poster while loading
+
+        loop                          Loops the digital video asset
+
+        autoplay                      Automatically plays a video on page load event
+
+        autobuffer                    Automatically buffers video on page load event
+
+
+    - To create a video tag:
+
+        <video width="400" height="300" controls>
+             <source src="my_preferred_video_codec.mp4"  type="video/mp4" />
+             <source src="second_choice_video_codec.ogg" type="video/ogg" />
+             <source src="third_choice_audio_codec.webm" type="audio/webm"/>
+             ALERT! Your Browser Does Not Support Video or the HTML5 Video Tag!
+        </video>
+
+
+    - The same autoplaying and loop options as audio tags are available for videos.
+
+        <video width="400" height="300" controls autoplay>...
+        <video width="400" height="300" controls autoplay>...
+
+
+    - Preloading data can also be done the same way as with audio tags.
+
+        <video width="400" height="300" controls preload="auto">...
+
+
+    - The 'poster' attribute is used to display an image while a video is buffering.
+
+        <video width="400" height="300" controls poster="posterimagename.png">...
+
 
 
 - The <svg> Tag
@@ -113,3 +216,6 @@
     - Digital Painting using JavaScript
     - Visual Effects
     - Web Speech
+
+
+
