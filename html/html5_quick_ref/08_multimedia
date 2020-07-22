@@ -209,13 +209,68 @@
 
 - The <svg> Tag
 
+    - The 'svg' tag is used for 2D digital illustration.  Packages that can generate SVG XML
+        data include GIMP, CorelDRAW, OpenOffice DRAW, and Adobe Illustrator.
+
+      Here are the attributes supported by the svg tag:
+
+        SVG Child Tag          Purpose of SVG Child Tag
+        ----------------------------------------------------------------------------
+        circle                 Draw a 2D circle element
+
+        rect                   Draw a 2D rectangle element
+
+        ellipse                Draw a 2D ellipse element
+
+        polygon                Draw a polygon (n-sided shape element)
+
+        polyline               Draw a polyline
+
+        line                   Draw a line
+
+        image                  Digital image to use as a poster while loading
+
+        path                   Defines a motion path along which a referenced is animated
+
+        filter                 Specifies filter effects to be used
+
+
+    - To create a digital illustration asset:
+
+        <!-- Create a simple circle -->
+        <svg width="640" height="480">
+           <circle cx="0" cy="0" r="25" fill="blue" stroke="red" stroke-width="4">
+        </svg>
+
+        <!-- Create a rounded rectangle -->
+        <svg width="640" height="480">
+           <rect x="20" y="20" rx="10" ry="10" width="200" height="200"
+                 style="fill:yellow; stroke:purple; stroke-width:6; opacity:0.5" />
+        </svg>
+
+
 
 - Other New Media Effects
 
     - Interactive 3D
+
+        The 'canvas' tag is used to implement 3D drawing.  This requires the WebGL API.
+
+
     - Digital Painting using JavaScript
+
+        Digital painting is a combination of digital imaging, vector illustration, particle
+          system, and digital video.  SVG is moving towards supporting it, but in the meantime,
+          JavaScript can be used to simultate it.
+
+
     - Visual Effects
+
+        Visual effects can be simulated using JavaScript in conjunction with CSS, WebGL2, and
+          HTML5 tags.
+
+
     - Web Speech
 
-
-
+        Chrome, Firefox, and Safari support the 'Web Speech' API, which allows for speech 
+          recognition and synthesis.
