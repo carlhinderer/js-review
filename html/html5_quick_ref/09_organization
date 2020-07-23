@@ -1,0 +1,95 @@
+-----------------------------------------------------------------------
+|  CHAPTER 9 - ORGANIZATION                                           |
+-----------------------------------------------------------------------
+
+- HTML5 Content Organization Tags
+
+    Organization Tags      Content Organization Tag Usage
+    ------------------------------------------------------------------------
+    h1                     Top-level heading (most SEO important keywords)
+
+    h2                     2nd-level heading (2nd SEO important keywords)
+
+    h3                     3rd-level heading (most SEO important keywords)
+
+    h4                     4th-level heading (most SEO important keywords)
+
+    h5                     5th-level heading (most SEO important keywords)
+
+    h6                     6th-level heading (most SEO important keywords)
+
+    hr                     Horizontal rule content divider line
+
+    address                Address information for article/document
+
+
+
+- Header Tags
+
+    - The 6 header tags should be used to logically stratify your text content.
+
+          <h1>Exotic Car Document</h1>
+          <p>Top Level Keywords Relating to Exotic Cars from Every Nation</p>
+
+          <h2>Exotic European Cars</h2>
+          <p>Next Level Keywords Relating to Exotic Cars from European Union</p>
+
+          <h3>Exotic European Sports Cars</h3>
+          <p>Next Level Keywords Relating to Exotic European Sports Cars</p>
+
+          <h4>Popular Exotic Italian Sports Cars (Ferrari and Lamborghini)</h4>
+          <p>Next Level Keywords Relating to Exotic Italian Sports Cars</p>
+
+          <h5>Currently Popular Ferrari Sports Cars</h5>
+          <p>Next Level Keywords for Currently Popular Ferrari Sports Cars</p>
+
+          <h6>Ferrari Sports Cars Available in North America (USA and Canada)</h6>
+          <p>Next Level Keywords for Ferrari Sports Cars Available in America</p>
+
+
+
+- The Horizontal Rule Tag
+
+    - Prior to HTML5, the <hr> tag was used to insert a line between logical areas in a
+        document.  In HTML5, it is no logner used for visual demarcation, but instead as a
+        logical or semantic demarcation between different sections.
+
+      These attributes are now no longer supported:
+
+        Organization Tags       Content Organization Tag Usage
+        ----------------------------------------------------------------------------
+        align                   Determine alignment (left, right, center values)
+
+        size                    Specify line height using pixels (integer value)
+
+        width                   Specify line width in pixels or as a percentage
+
+        noshade                 Forces one solid color value to be used for line
+
+
+    - To create the horizontal rule and semantic break between sections, use an <hr> tag
+        after the last <p> tag in the section.
+
+        <h6>Ferrari Sports Cars Available in North America (USA and Canada)</h6>
+        <p>Next Level Keywords for Ferrari Sports Cars Available in America</p> 
+        <hr>
+
+
+
+- The Address Tag
+
+    - The 'address' tag defines the type of addresses in a document to provide contact 
+        information for the user.
+
+      Here is an example.  The <br> and <hr> are used to separate the elements of the
+        address.
+
+        <body>
+          <address>
+           Document Created By: <a href="mailto:info@wallacejackson.com>Walls</a>
+            <br><hr>
+           Address: 12345 Streetname Road, Cityname, Statename, Zip Code, Country
+            <br><hr>
+           Website: <a href="http://www.wallacejackson.com>WallaceJackson.com</a>
+          </address>
+        </body>
