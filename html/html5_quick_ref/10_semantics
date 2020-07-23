@@ -1,0 +1,129 @@
+-----------------------------------------------------------------------
+|  CHAPTER 10 - SEMANTICS                                             |
+-----------------------------------------------------------------------
+
+- HTML5 Semantic Content Organization
+
+    - Prior to HTML5, developers created semanting meaning for their content by using
+        div tags with the 'id' or 'class' attribute (ie <div id="header">).
+
+      HTML5 added standardized semantic labels to make sites easy for search engines and 
+        automated tools to parse.  Here are the semantic tags:
+
+
+        Organization Tags        Content Organization Tag Usage
+        ---------------------------------------------------------------------------
+        header                   Specifies the header information of the document
+
+        footer                   Specifies the footer information of the document
+
+        section                  Specifies the section information of the document
+
+        main                     Specifies primary or main content of the document
+
+        nav                      Navigation; usually a collection of anchor tags
+
+        article                  Specifies the article information of the document
+
+        aside                    Sidebar content related to the surrounding text
+
+        figure                   Specifies figure and new media of the document
+
+        figcaption               Defines a caption for the <figure> tag
+
+        details                  Often used to create an interactive widget that the user can open and close. 
+
+        summary                  Defines a visible heading for the <details> element.
+
+        mark                     Defines text that should be marked or highlighted. 
+
+        time                     Defines a specific time (or datetime)
+
+
+
+    - The Section Tag
+
+        The 'section' tag is used to define any kind of section in a document (ie a chapter).
+          It is a child of the 'body' and 'article' tags.
+
+          <body>
+              <section id="exotic">
+                  <h1>Exotic Car Document</h1>
+              </section>
+              <section id="domestic">
+                  <h1>Domestic Car Document</h1>
+              </section>
+          </body>
+
+
+
+    - The Header Tag
+
+        The 'header' tag defines the introductory content of the document.
+
+          <body>
+              <header>
+                  <h1>Exotic Cars Unleashed!</h1>
+                  <p>Top Level Keywords Relating to Exotic Cars from Every Nation</p>
+              </header>
+              <section id="european">
+                  ...
+              </section>
+              <section id="american">
+                  ...
+              </section>
+          </body>
+
+
+
+    - The Footer Tag
+
+        The 'footer' tag is used to define a footnote for the document.
+
+          <body>
+              <header>
+                  ...
+              </header>
+              <section id="european">
+                  ...
+              </section>
+              <section id="american">
+                  ...
+              </section>
+              <footer>
+                  <h4>Exotic Car Article Article, Contact and Sources:</h1>
+                  <p>Blog’s Author: Wallace Jackson</p>
+                  <p>Author e-mail: <a href="mailto: wj@email.com">Wallace Jackson</a></p>
+                  <p>Blog’s Source: Magazine or Book Resources and Links would go here</p>
+              </footer>
+          </body>
+
+
+
+- HTML5 Content Type Semantic Definition Tags
+
+
+    - The Main Tag
+
+
+    - The Nav Tag
+
+
+    - The Article Tag
+
+
+    - The Aside Tag
+
+
+
+- HTML5 Semantic New Media Figure Definition Tags
+
+    - The Figure and Figcaption Tags
+
+
+
+- HTML5 Semantic Document Detail Definition Tags
+
+    - The Details and Summary Tags
+
+    - The Mark and Time Tags
