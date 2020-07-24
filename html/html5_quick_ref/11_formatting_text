@@ -1,0 +1,116 @@
+-----------------------------------------------------------------------
+|  CHAPTER 11 - FORMATTING TEXT CONTENT                               |
+-----------------------------------------------------------------------
+
+- Create HTML5 Text Content for Publishing
+
+    - Here are the tags for creating, formatting, styling, and publishing text-based 
+        content.
+
+        Text Content Tags        Tag Standard Usage
+        --------------------------------------------------------------------------
+        p                        Specifies a paragraph of text content
+
+        pre                      Specifies pre-formatted text content
+
+        abbr                     Specifies an abbreviation
+
+        b                        Specifies the bold style for the text content
+
+        i                        Specifies the italics style for the text content
+
+        u                        Specifies the underline style for the text content
+
+        br                       Specifies a line break (new line, carriage return)
+
+        wbr                      Specifies a word break opportunity for long words
+
+        small                    Specifies a small text style for that text content
+
+        sub                      Specifies subscript text style for text content
+
+        sup                      Specifies superscript text style for text content
+
+        bdi                      Specifies bidirectional isolation for text content
+
+        bdo                      Specifies bidirectional override on text direction
+
+        q                        Specifies a short quotation for the document
+
+        blockquote               Specifies a long (block) quotation for document
+
+        cite                     Defines a title (citation) for a published work
+
+        data                     Specifies human-readable and machine-readable data
+
+        s                        Specifies text that is no longer accurate/relevant
+
+        del                      Specifies text content which has been deleted
+
+        ins                      sSpecifies text content which has been inserted 
+
+
+
+- HTML5 Text Formatting - Paragraph, Pre, and Abbr Tags
+
+    - The 'p' tag defines a paragraph.
+
+        <p>This is an example of a paragraph, containing text sentences.</p>   
+
+
+    - The 'pre' tag defines an area of preformatted text.
+
+        <pre>            
+              88  
+             8888  
+             8888  
+            888888
+        </pre>
+
+
+    - The 'abbr' tag is used to create an abbreviation which will display the full text
+        when moused over.
+
+        <p>Christmas Tree is also <abbr title="Christmas">XMAS</abbr> Tree!</p>
+
+
+
+- HTML5 Text Styling - Bold, Italics, and Underline
+
+    - According to the HTML5 specification, the 'b', 'i', and 'u' tags are still supported,
+        but should only be used as a last resort.  CSS styles should be used instead
+        wherever possible.
+
+
+    - The 'b' tag defines an area of bold text.
+
+        <p> This is normal text. <b> This is bold text.</b> </p>
+
+
+    - The 'i' tag defines an area of italic text.
+
+        <p> This is normal text. <i> This is italic text.</i> </p>
+
+
+    - The 'u' tag defines an area of underlined text.
+
+        <p> This is normal text. <u> This is underlined text.</u> </p>
+
+
+
+- HTML5 Break Tags - Line Break and Word Break
+
+
+- HTML5 Text Size - Small, Superscript, and Subscript
+
+
+- HTML5 Text Direction - The Bidirectional Text Tags
+
+
+- HTML5 Text Quotes - Quote and Blockquote Tags
+
+
+- HTML5 Text Citations - The Cite Tag
+
+
+- HTML5 Text Special Circumstances - Other Tags
