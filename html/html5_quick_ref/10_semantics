@@ -102,17 +102,97 @@
 
 - HTML5 Content Type Semantic Definition Tags
 
-
     - The Main Tag
+
+        The 'main' tag defines the topmost level of the document.  Only one 'main' tag is used
+          in a single document.  It cannot be used as a child of other semantic tags.
+
+          <body>
+              <main>              
+                  <header>
+                      ...
+                  </header>
+                  <section id="european">
+                      ...
+                  </section>
+                  <section id="american">
+                      ...
+                  </section>
+                  <footer>
+                      ...
+                  </footer>
+              </main>
+          </body>
+
 
 
     - The Nav Tag
 
+        The 'nav' tag defines the user interface of the document's navigation area.
+
+          <body>
+              <main>              
+                  <header>
+                  </header>
+                  <nav>              
+                      <a http://www.web-address.com/car-info.html>CAR INFO</a>
+                      <a http://www.web-address.com/our-team.html>OUR TEAM</a>
+                      <a http://www.web-address.com/buy-cars.html>BUY CARS</a>
+                  </nav>              
+                  <section id="european">
+                  </section>
+                  <section id="american">
+                  </section>
+                  <footer>
+                  </footer>
+              </main>
+          </body>
+
+
 
     - The Article Tag
 
+        The 'article' tag defines an article within your document.  It is independent of
+          your other document content.
+
+          <body>
+              <main>              
+                  <header>
+                     ...
+                  </header>
+                  <nav>
+                     ...
+                  </nav>
+                  <article>              
+                      <h2>Exotic European Cars: Maintaining a Lead Over US Manufacturers</h2>
+                      <p>Next Level Keywords Relating to Exotic Cars from European Union</p>
+                      <h3>Exotic European Sports Car Round-Up</h3>
+                      <p>Next Level Keywords Relating to Exotic European Sports Cars</p>
+                  </article>              
+                  <article>  
+                      ...            
+                  </article>              
+                  <footer>
+                      ...
+                  </footer>
+              </main>              
+          </body>                                                                                                    
+
+
 
     - The Aside Tag
+
+        The 'aside' tag defines an informational sidebar in your document.  Sidebar content
+          should be related to the content adjacent to it.
+
+          <article>
+              <h2>Exotic European Cars: Maintaining a Lead Over US Manufacturers</h2>
+              <p>Next Level Keywords Relating to Exotic Cars from European Union</p>
+              <aside>              
+                  <h4>Sidebar: Top Selling European Sports Cars</h4>
+                  <p>Next Level Keywords Relating to Top Selling European Sports Cars</p>
+              </aside>              
+          </article>
 
 
 
