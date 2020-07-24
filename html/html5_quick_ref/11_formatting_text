@@ -100,11 +100,57 @@
 
 - HTML5 Break Tags - Line Break and Word Break
 
+    - The 'wbr' tag is used to add a word break, which uses a hyphen to break a long
+        word across lines.
+
+        <p>This is an example of a word which is really long using word break:
+        Pneumono<wbr>ultramicroscopic<wbr>silico<wbr>volcano<wbr>coniosis</p>
+
+
+    - The 'br' tag is used to add a line break.
+
+        <p>This is an example of using the line break tag to break apart<br>            
+        a paragraph containing text sentences<br>            
+        without using multiple paragraph tags.<br><br>            
+        It is possible to put line spacing between your sentences<br>            
+        and still use only one single paragraph.</p>
+
+
 
 - HTML5 Text Size - Small, Superscript, and Subscript
 
+    - The 'small' tag is used to create small text in a sentence.
+
+        <p>An example of <small>small text</small> contained in a sentence.</p>
+
+
+    - The 'sup' tag is used to add superscript.
+
+        <p>Ten Squared Equals One Hundred: 10<sup>2</sup> = 100</p>
+
+
+    - The 'sub' tag is used to add subscript.
+
+        <p>Further Research Material<sub>[1]</sub> is in the Footer.</p>
+
+
 
 - HTML5 Text Direction - The Bidirectional Text Tags
+
+    - The 'bdi' and 'bdo' tags are used to tell the rendering engine which direction the
+        text should go.  The options are left-to-right and right-to-left.
+
+      The 'bdi' tag is used to create an isolated (don't apply current document's text 
+        direction) portion of text with a specified direction.
+
+        <p>An example of <bdi>isolated text</bdi> contained in a sentence.</p>
+
+
+    - The 'bdo' tag is used to override the default text direction.  The 'dir' attribute
+        which specifies the direction is required.
+
+        <p>Override this to create <bdo dir="rtl">right to left</bdo>text.</p>
+
 
 
 - HTML5 Text Quotes - Quote and Blockquote Tags
