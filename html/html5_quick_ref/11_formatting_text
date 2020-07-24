@@ -155,8 +155,62 @@
 
 - HTML5 Text Quotes - Quote and Blockquote Tags
 
+    - The 'q' tag tells the rendering engine that the enclosed text is a quote.  This tag
+        will add the quotation marks for you.  Optionally, the 'cite' attribute can be supplied
+        to source the quote with a URL.
+
+        <q cite="http://www.wallacejackson.com>
+        This is a sample quotation from the Author of HTML5 Quick Markup Reference.
+        </q>
+
+
+    - The 'blockquote' tag is used for longer quotations, taken from another source.  Most 
+        browsers will indent the content in this tag.
+
+        <blockquote cite="http://www.apress.com/9781484218624">            
+        This compact quick scripting syntax reference on JSON covers
+        syntax and parameters central to JSON object definitions, using
+        the NetBeans 8.1 open source and Eclipse IDE software tool packages.
+        </blockquote>            
+
+
 
 - HTML5 Text Citations - The Cite Tag
 
+    - The 'cite' tag tells the rendering engine to apply a title citation for an 
+        intellectual property work to any text inside the tags.
+
+        <p>I wrote <cite>JSON Quick Syntax Reference</cite> during 2016.</p>
+
+
+
 
 - HTML5 Text Special Circumstances - Other Tags
+
+    - The 'data' tag provides machine-readable data.  It is useful in cases in which data
+        needs to be in a certain format to be processed using JavaScript, but does not
+        format well for human-readable applications.
+
+      For instance, maybe we want to present numeric values to users as strings ('one', 'two'),
+        but you also need numerical representations so they can be sorted.
+
+        <p>An example of <data> tags contained in a paragraph. Numbers Include:
+            <data value="1">One</data>
+            <data value="2">Two</data>
+            <data value="3">Three</data>
+        </p>
+
+
+    - The 's' tag is used for strikethrough text.
+
+        <p>I wrote <s>Android Apps for Absolute Beginners 1st Ed.</s> in 2010.</p>
+
+      This tag is now deprecated and CSS should be used instead.
+
+        s { text-decoration: line-through; }
+
+
+    - The 'del' tag is used for text that has been deleted and replaced using the 'ins'
+        tag.
+
+        <p>My favorite team is the <del>Steelers</del> <ins>Browns</ins>.</p>
