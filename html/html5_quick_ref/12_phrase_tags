@@ -1,0 +1,129 @@
+-----------------------------------------------------------------------
+|  CHAPTER 12 - PHRASE TAGS                                           |
+-----------------------------------------------------------------------
+
+- HTML Phrase Tags
+
+    - HTML 'phrase' tags are used to create non-standard types of text content for 
+        publishing in documents, websites, or applications.  Most of them are supported
+        in legacy versions of HTML.
+
+      Here is a list of the phrase tags used for defining, styling, input, and coding,
+
+        Text Phrase Tags        Text Phrase Tag Usage
+        -------------------------------------------------------------------------
+        dfn                     Defines the defining instance for a term
+
+        strong                  Defines an important term or statement
+
+        em                      Defines an emphasized term or statement
+
+        kbd                     Defines keyboard input
+
+        tt                      Defines Teletype input (not supported in HTML5)
+
+        code                    Defines a computer code listing or fragment
+
+        samp                    Defines a computer code sample output
+
+        var                     Defines a computer code variable
+
+
+
+- HTML5 Tags for Highlighting Important Text
+
+    - The 'dfn' Tag
+
+        The 'dfn' tag represents the defining instance of a term used in a document, 
+          website, or application.  This defining instance is the first usage of a particular
+          term within a given document.
+
+          <p>Did you know <dfn>JSON</dfn> stands for: JavaScript Object Notation?</p>
+
+
+    - The 'strong' Tag
+
+        The 'strong' tag is the semantic search version of the 'b' tag.  It bolds text and 
+          also indicates greater importance.
+
+          <p>This text is <strong>important</strong></p>
+
+
+    - The 'em' Tag
+
+        The 'em' tag is the semantic search version of the 'i' tag.  It italicizes the text
+          and also indicates a greater emphasis.
+
+          <p>This text is <em>emphasized</em></p>
+
+
+
+- HTML5 Tags for Keyboard and Teletype
+
+    - The 'kdb' Tag
+
+        The 'kdb' tag specifies keyboard input.  It will make the text look more like 
+          a coding font.  Most HTML5 browsers will display it the same as they will teletype.
+
+          <p>Here is some <kdb>keyboard input</kdb></p>
+
+        This tag's style can also be simulated using CSS.
+
+          kbd { font-family: monospace; }
+          kbd { font-family: Courier; }      // This CSS3 will simulate a typewriter
+          kbd { font-family: 'Lucida Console'; } // This CSS3 will simulate Teletype
+
+
+    - The 'tt' Tag
+
+        The 'tt' tag specifies teletype input.  
+
+          <p>Here is some <tt>teletype input</tt></p>
+
+        This tag's style can also be simulated using CSS.
+
+          tt { font-family: monospace; }    // This CSS3 will simulate a keyboard!
+          tt { font-family: Courier;   }   // This CSS3 will simulate a typewriter!
+
+
+
+- HTML5 Tags for Code and Variables
+
+    - The 'code' Tag
+
+        The 'code' tag defines a code fragment.
+
+          <code>              
+          legalButton.setOnAction(new EventHandler<ActionEvent>() {
+              @Override
+              public void handle(ActionEvent event) {
+                  infoOverlay.getChildren().clear();
+                  infoOverlay.getChildren().addAll(copyText, riteText);
+                  infoOverlay.setTranslateY(380);
+                  infoOverlay.setLineSpacing(-9);
+                  uiContainer.setBackground(uiBackground3);
+                  boardGameBackPlate.setImage(transparentlogo);
+              }
+          });
+          </code>
+
+
+    - The 'samp' Tag
+
+        The 'samp' tag is used to define code output, which is the result of running
+          code.
+
+          <samp>              
+          Hello World!
+          </samp>              
+
+
+    - The 'var' Tag
+
+        The 'var' tag defines code variables.
+
+        <code>legalButton.setOnAction(new EventHandler<ActionEvent>() {
+           ...
+           infoOverlay.getChildren().addAll(<var>copyText, riteText</var>);
+           ...
+        });</code>
