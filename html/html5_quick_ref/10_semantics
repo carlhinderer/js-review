@@ -200,10 +200,51 @@
 
     - The Figure and Figcaption Tags
 
+        A 'figure' tag is used to define multimedia.  A 'figcaption' tag is nested to define
+          a caption for the new media asset.
+
+          <article>
+              <h2>Exotic American Cars: Gaining on the Domination of European Cars</h2>
+              <p>Next Level Keywords Relating to Domestic Cars from North America</p>
+              <figure>              
+                  <img src="sport-car-image.png" alt="sports car image related keywords">
+                  <figcaption>Figure 1. Image of Popular American Sports Car</figcaption>              
+              </figure>              
+          </article>
+
 
 
 - HTML5 Semantic Document Detail Definition Tags
 
     - The Details and Summary Tags
 
+        The 'details' tag is used in conjunction with the 'summary' tag to define pop-up
+          information that allows users to drill down for more information.  The 'details' tag 
+          has one parameter, 'open', which determines whether it is currently shown.
+
+          <header>
+              <h1>Exotic Cars Magazine: Current Exotic Car Articles</h1>
+              <p>Top Level Keywords Relating to Exotic Cars from Every Nation</p>
+              <details>              
+                  <summary>Click Here For the List of Our Featured Articles!</summary>              
+                  <p>Exotic European Cars: Maintaining the Lead Over US Manufacturers</p>
+                  <p>Exotic American Cars: Gaining on the Domination of European Cars</p>
+              </details>              
+          </header>
+
+
+
     - The Mark and Time Tags
+
+        The 'mark' tag highlights important text.  The 'time' tag defines human-readable
+          time values.
+
+          <header>
+              <h1>Exotic Cars Magazine: Current Exotic Car Articles</h1>
+              <p>Top Level Keywords Related to <mark>Exotic Cars</mark> worldwide</p>
+              <details>
+                  <summary>List of Our Articles Released at <time>10:00</time></summary>
+                  <p>Exotic European Cars: Maintaining the Lead Over US Manufacturers</p>
+                  <p>Exotic American Cars: Gaining on the Domination of European Cars</p>
+              </details>
+          </header>
