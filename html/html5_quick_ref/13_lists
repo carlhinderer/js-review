@@ -1,0 +1,81 @@
+-----------------------------------------------------------------------
+|  CHAPTER 13 - LISTS                                                 |
+-----------------------------------------------------------------------
+
+- List of HTML5 List Tags
+
+    HTML5 List Creation Tags        HTML5 List Creation Tag Usage
+    ---------------------------------------------------------------------------
+    li                              Defines a list item
+
+    ol                              Defines an ordered list
+
+    ul                              Defines an unordered list
+
+    dl                              Defines a definition list
+
+    dt                              Defines a definition term
+
+    dd                              Defines the definition data
+
+
+
+- Ordered and Bulleted Lists
+
+    - The 'li' Tag
+
+        The 'li' tag is used for individual elements in the list.
+
+          <li>Ferrari</li>
+
+
+    - The 'ul' Tag
+
+        The 'ul' tag creates bulleted lists.  The 'type' attribute was previously used to
+          use different bullet types ('disc', 'circle', 'square'), but CSS is the preferred
+          method of doing that now.
+
+          <ul>
+              <li>Ferrari</li>
+              <li>Porsche</li>
+          </ul>          
+
+
+    - The 'ol' Tag
+
+        The 'ol' defines lists that are numbered, use Roman numerals, or use letters to
+          determine the order of the list elements.
+
+        Here are the attributes is can accept:
+
+          Ordered List Parameter         Ordered List Parameter Usage
+          ----------------------------------------------------------------------------
+          type                           Defines ordering type (1, A, a, I, or i)
+
+          reversed                       Defines numbering direction (backward)
+
+          start                          Defines the start number (for number type)
+
+          compact                        Defines the List to be rendered: smaller 
+
+
+          <ol type="1" start="4" reversed>              
+              <li>Ferrari</li>
+              <li>Lamborghini</li>
+              <li>Porsche</li>
+              <li>Bugatti</li>
+          </ol>
+
+
+
+- Description Lists
+
+    - The 'dl' tag is the parent tag for definition lists.  Each list entry includes a 'dt' tag
+        for the term and a 'dd' tag for the definition.
+
+        <dl>              
+            <dt>Ferrari</dt><dd>LaFerrari</dd>
+            <dt>Bugatti</dt><dd>Chiron</dd>
+            <dt>Maserati</dt><dd>GranCabrio</dd>
+            <dt>Lamborghini</dt><dd>Gallardo</dd>
+        </dl>              
