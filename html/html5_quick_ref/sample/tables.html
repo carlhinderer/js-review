@@ -7,5 +7,99 @@
     <body>
         <h2>Table Tags</h2>
         <hr />
+
+        <h4>Simple Table</h4>
+        <table border='1'>
+            <tr>
+                <th>Heading 1</th>
+                <th>Heading 2</th>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+        </table>
+        <br>
+
+        <h4>Sortable Table</h4>
+        <table border='1' sortable>
+            <tr>
+                <th>Heading 1</th>
+                <th>Heading 2</th>
+            </tr>
+            <tr>
+                <td>R1C1</td>
+                <td>R1C2</td>
+            </tr>
+            <tr>
+                <td>R2C1</td>
+                <td>R2C2</td>
+            </tr>
+        </table>
+        <br>
+
+        <h4>Semantic Table Tags with thead, tfoot, and tbody</h4>
+        <section id="exotic car table">
+            <table border='1'>
+                <caption>Exotic Italian Car Manufacturers and Current Models</caption>
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                    </tr>
+                </thead>
+                <tfoot>              
+                    <tr>
+                        <th>References:</th>
+                    </tr>
+                    <tr>
+                        <td>Sports Car Brands and Models researched using Google</td>
+                    </tr>
+                </tfoot>              
+                <tbody>
+                    <tr>
+                        <td>Ferrari</td>
+                        <td>LaFerrari</td>
+                    </tr>
+                    <tr>
+                        <td>Bugatti</td>
+                        <td>Chiron</td>
+                    </tr>
+                    <tr>
+                        <td>Maserati</td>
+                        <td>GranCabrio</td>
+                    </tr>
+                    <tr>
+                        <td>Lamborghini</td>
+                        <td>Gallardo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <br>
+
+        <h4>The col and colgroup tags are used to apply changes across multiple rows</h4>
+        <table border='1'>
+            <caption>Italian Car Manufacturer (Yellow) and Model (Orange)</caption>
+            <colgroup>            
+                <col style="background-color:yellow" />
+                <col style="background-color:orange" />
+            </colgroup>            
+            <thead>
+                <tr><th>Manufacturer</th><th>Model</th></tr>
+            </thead>
+            <tfoot>
+                <tr><th>References:</th></tr>
+                <tr><td>Sports Car Brands and Models researched using Google</td></tr>
+            </tfoot>
+            <tbody>
+                <tr><td>Ferrari</td><td>LaFerrari</td></tr>
+                <tr><td>Bugatti</td><td>Chiron</td></tr>
+                <tr><td>Maserati</td><td>GranCabrio</td></tr>
+                <tr><td>Lamborghini</td><td>Gallardo</td></tr>
+            </tbody>
+        </table>
+        <br>
+
     </body>
 </html>

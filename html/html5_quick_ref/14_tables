@@ -1,0 +1,247 @@
+-----------------------------------------------------------------------
+|  CHAPTER 14 - TABLES                                                |
+-----------------------------------------------------------------------
+
+- List of HTML5 Table Tags
+
+    HTML Table Creation Tags      HTML Table Creation Tag Usage
+    -----------------------------------------------------------------------
+    table                         Defines a table
+
+    caption                       Defines a table caption
+
+    tr                            Defines a table row
+
+    th                            Defines a table heading cell
+
+    td                            Defines a table data cell
+
+    thead                         Defines a table header
+
+    tbody                         Defines a table body
+
+    tfoot                         Defines a table footer
+
+    col                           Defines a table column
+
+    colgroup                      Defines a table column group
+
+
+
+- Tables and Captions
+
+    - The 'table' Tag
+
+        The 'table' tag is the parent element for tables.  Here are the attributes is supports:
+
+          Table Tag Parameters      Table Tag Parameter Usage
+          ------------------------------------------------------------------------------
+          sortable                  Defines the table as sortable
+
+          border                    Defines the table as having a border
+
+          align                     Defines alignment (left, right, center)
+
+          bgcolor                   Defines the table background color
+
+          cellpadding               Defines the table cell padding value
+
+          cellspacing               Defines the table cell spacing value
+
+          frame                     Defines outside borders that are visible
+
+          rules                     Defines inside borders that are visible
+
+          summary                   Defines the summary of the table content
+
+          width                     Defines the table width 
+
+
+          <table border="1" sortable>              
+              <tr>
+                  <th>Brand</th>
+                  <th>Model</th>
+              </tr>
+              <tr>
+                  <td>Ferrari</td>
+                  <td>LaFerrari</td>
+              </tr>
+          </table>
+
+
+    - The 'caption' Tag
+
+        The 'caption' tag adds a caption to your table.
+
+          <table>
+              <caption>Exotic Italian Car Manufacturers and Current Models</caption>
+              <tr>
+                  <th>Brand</th>
+                  <th>Model</th>
+              </tr>
+              <tr>
+                  <td>Ferrari</td>
+                  <td>LaFerrari</td>
+              </tr>
+          </table>
+
+
+
+- HTML5 Table Content Definition
+
+    - The 'tr' Tag
+
+        The 'tr' tag defines table rows.  Here are the (now deprecated) attributes it supports:
+
+          tr Tag Parameters        tr Tag Parameter Usage
+          ------------------------------------------------------------------------------
+          align                    Alignment (left, right, center, justify)
+
+          bgcolor                  Defines the table row background color
+
+          char                     Aligns content to a table row character
+
+          charoff                  Defines the character alignment offset
+
+          valign                   Vertical alignment (top, middle, bottom) 
+
+
+    - The 'th' Tag
+
+        The 'th' tag defines table headings.  Text inside the headings is automatically 
+          centered and bolded.  Here are the attributes it supports:
+
+          th Tag Parameters         th Tag Parameter Usage
+          ---------------------------------------------------------------------------
+          sorted                    Defines a sort direction for that column
+
+          scope                     Defines header scope (col, row or group)
+
+          abbr                      Defines a header abbreviation term
+
+          headers                   Defines header cells a header relates to
+
+          colspan                   Defines a number of columns header spans
+
+          rowspan                   Defines a number of rows a header spans
+
+          align                     Alignment (left, right, center, justify)
+
+          axis                      Defines category names for header cell
+
+          bgcolor                   Defines the header background color
+
+          char                      Aligns content to table header character
+
+          charoff                   Defines the character alignment offset
+
+          height                    Defines the table height
+
+          nowrap                    Specify no wrap flag for header content
+
+          valign                    Vertical alignment (top, middle, bottom)
+
+          width                     Defines the table width
+
+
+          <tr>
+              <th id="namedata" colspan="2">Enter Name Here:</th>
+          </tr>
+          <tr>
+              <th headers="namedata">Proper Name:</th>
+              <th headers="namedata">Family Name:</th>
+          </tr>
+
+
+    - The 'td' Tag
+
+        The 'td' tag defines table data.  
+
+
+
+- Complex Table Definition
+
+    - The 'thead' Tag
+
+        The 'thead', 'tbody', and 'tfoot' headers are used to add semantic meaning to tables.
+          Browsers then leverage these elements to allow for asynchronous scrolling.  All 3 
+          elements must be children of the 'table' element.
+
+        The 'thead' tag is used to group all header content together.
+
+
+    - The 'tbody' Tag
+
+        The 'tbody' tag is used to hold the main part of the table.  It must come after the
+          'thead' and 'tfoot' tags.
+
+
+    - The 'tfoot' Tag
+
+        The 'tfoot' tag is used to hold the footer part of a table.  It is used to create an
+          enhanced table result, which has a footer with references.
+
+
+        <section id="exotic car table">
+            <table>
+                <caption>Exotic Italian Car Manufacturers and Current Models</caption>
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                    </tr>
+                </thead>
+                <tfoot>              
+                    <tr>
+                        <th>References:</th>
+                    </tr>
+                    <tr>
+                        <td>Sports Car Brands and Models researched using Google</td>
+                    </tr>
+                </tfoot>              
+                <tbody>
+                    <tr>
+                        <td>Ferrari</td>
+                        <td>LaFerrari</td>
+                    </tr>
+                    <tr>
+                        <td>Bugatti</td>
+                        <td>Chiron</td>
+                    </tr>
+                    <tr>
+                        <td>Maserati</td>
+                        <td>GranCabrio</td>
+                    </tr>
+                    <tr>
+                        <td>Lamborghini</td>
+                        <td>Gallardo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+- The 'col' and 'colgroup' Tags
+
+    - The 'col' tag is generally used inside of a 'colgroup' tag to define column
+        characteristics across an entire column, so you don't have to do it inside every
+        'th' or 'td' tag.
+
+        <!-- Manufacturer column is yellow, model column is orange -->
+        <table>
+            <caption>...</caption>
+            <colgroup>            
+                <col style="background-color:yellow" />
+                <col style="background-color:orange" />
+            </colgroup>            
+            <thead>
+                ...
+            </thead>
+            <tfoot>
+                ...
+            </tfoot>
+            <tbody>
+                ...
+            </tbody>
+        </table>
