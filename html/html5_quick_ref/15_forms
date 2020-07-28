@@ -1,0 +1,272 @@
+-----------------------------------------------------------------------
+|  CHAPTER 15 - FORMS                                                 |
+-----------------------------------------------------------------------
+
+- List of HTML Form Tags
+
+    Form Creation Tag          Tag’s Purpose or Usage
+    -------------------------------------------------------------------
+    form                       Defines a form
+
+    input                      Defines an input (data field)
+
+    label                      Defines an input (field) label
+
+    textarea                   Defines text area (multi-line input field)
+
+    fieldset                   Defines a fieldset (group of input fields)
+
+    legend                     Defines a legend (label) for a fieldset
+
+    select                     Defines a drop-down list
+
+    option                     Defines an option in drop-down list
+
+    optgroup                   Defines an option group in drop-down list
+
+    button                     Defines a button
+
+    datalist (new in HTML5)    Pre-defined option list for input controls
+
+    keygen (new in HTML5)      Defines a key-pair generator field in form
+
+    output (new in HTML5)      Defines output (a result of a calculation)
+
+
+
+- The 'form' Tag
+
+    - Here are the attributes the 'form' tag supports:
+
+        Form Tag Parameter            Form Tag Parameter’s Usage
+        ---------------------------------------------------------------------------------
+        accept (no HTML5 support)     Specifies a comma-separated list of file types that a 
+                                        server accepts, which is submitted through a file 
+                                        upload process
+
+        autocomplete (New in HTML5)   Specifies autocomplete on or off for form
+
+        novalidate (New in HTML5)     Specifies a form should not be validated
+
+        accept-charset                Specifies character encodings that are specified for 
+                                        use for a form submission
+
+        action                        Specifies where to submit the form data
+
+        enctype                       Specifies how form data should be encoded
+
+        method                        Specifies HTTP method to use (get or post)
+
+        name                          Allows you to specify the form name
+
+        target                        Specifies where to display the response is received after 
+                                        submitting the form (_blank, _parent, _self, _top)
+
+
+        <form action="myForm.asp" method="get" autocomplete="on" novalidate>              
+            <!-- Your Form Design and Child Tags will be nested in here -->
+        </form>
+
+
+
+- The 'input' Tag
+
+    - The 'input' tag is used to define data input areas for users to enter text.
+
+        <form action="myForm.asp" method="get" autocomplete="on" novalidate>
+            Manufacturer: <input type="text" name="manufacturer" value="Ferrari"><br>
+            A Model Name: <input type="text" name="model-name" value="LaFerrari"><br>
+        </form>
+
+
+    - Here are the new HTML5 attributes the tag supports:
+
+        Input Tag Parameter      Input Tag Parameter’s Usage
+        ----------------------------------------------------------------------------------
+        autocomplete             Specifies autocomplete on or off for input
+
+        autofocus                Specifies autofocus for input on page load
+
+        dirname                  Specifies respect text direction for input
+
+        form                     Specifies a form that the input belongs to
+
+        formaction               Specifies URL that the form is processed at
+
+        formenctype              Specifies encoding (for submit or image)
+
+        formmethod               Specifies HTTP method to use (get or post)
+
+        formnovalidate           Specifies input should not be validated
+
+        formtarget               Specifies where to display the response
+
+        height                   Specifies the height for the input element
+
+        list                     Specifies datalist containing input options
+
+        max                      Specifies a maximum value for input element
+
+        min                      Specifies a minimum value for input element
+
+        multiple                 Specifies more than one value for an input
+
+        pattern                  Specifies the “regular expression” that an <input> element 
+                                   value is checked against
+
+        placeholder              Specifies a short hint, describing expected value to be entered 
+                                   in an <input> element
+
+        required                 Specifies an input field as being required
+
+        step                     Specifies legal number intervals for input
+
+        width                    Specifies the width for the input element
+
+
+    - Here are the legacy attributes supported by the 'input' tag.
+
+        Input Tag Parameter      Input Tag Parameter’s Usage
+        ------------------------------------------------------------------------------------
+        align (Not in HTML5)     Specifies the alignment of an image input; only for type=“image” 
+                                   (left, right, top, middle, bottom)
+
+        accept                   Specifies the types of files that a server accepts; only for 
+                                   type=“file” (audio/type, video/type, image/type)
+
+        alt                      Specifies alternate text for images; this is only for type=“image”
+
+        checked                  Specifies input element pre-selected after the pageload; this is 
+                                   for type=“checkbox” or for type=“radio” (radio buttons)
+
+        disabled                 Specifies <input> element should be disabled
+
+        maxlength                Specifies maximum characters in input field
+
+        name                     Specifies the input field (element) name
+
+        readonly                 Specifies that input field is read-only
+
+        size                     Specifies input field width in characters
+
+        src                      Specifies a URL for an image to use as a submit button; only used 
+                                   for type=“image”
+
+        type                     Specifies a type of input element to display
+
+        value                    Specifies the input element default value
+
+
+    - Adding 'autofocus' to a field sets the cursor to that field automatically.
+
+        <input type="text" name="manufacturer" value="Ferrari" maxlength="16" autofocus>
+
+
+    - The 'label' Tag
+
+        The 'label' tag creates a descriptive label for an input element.  Here, we have a
+          set of radio buttons, each with a label.
+
+          <form name="carform" action="myForm.asp" method="get" novalidate>
+              <label for="ferrari">Ferrari</label>
+              <input type="radio" name="cartype" form="carform" id="ferrari" value="Ferrari Brand" />
+              <br>
+              <label for="maserati">Maserati</label>
+              <input type="radio" name="cartype" form="carform" id="maserati" value="Maserati Brand" />
+              <br>
+          </form>
+
+
+    - Input Types
+
+        <form action="url_to_send_data" method="post">
+          Textbox: <br />
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" value="" size="30" maxlength="40" />
+          <br /><br />
+
+          Password Box: <br />
+          <label for="password">Password</label>
+          <input type="password" id="password" value="" size="30" maxlength="40" />
+          <br /><br />
+
+          Radio Buttons: <br />
+          <label for="favorite-team">Favorite Team</label> <br />
+          <input type="radio" id="team-browns" name="favorite-team" value="browns" checked="checked" />
+          Browns <br />
+          <input type="radio" id="team-buckeyes" name="favorite-team" value="buckeyes" />
+          Buckeyes
+          <br /><br />
+
+          Checkboxes: <br />
+          <label for="sports">Sports</label> <br />
+          <input type="checkbox" id="baseball" value="baseball" />
+          Baseball <br />
+          <input type="checkbox" id="football" value="football" />
+          Football
+          <br /><br />
+
+          List Box: <br />
+          <select id="age">
+            <option value="25" selected="selected">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+          </select>
+          <br /><br />
+
+          Text Area: <br />
+          <textarea  id="comments"  name="comments"  cols=”100” rows=”150”>Type Here...</textarea>
+          <br /><br />
+
+          Hidden Fields: <br />
+          <input type="hidden" id="secret" value="secret" />
+          <br /><br />
+
+          Buttons: <br />
+          Button
+          <input type="button" id="regular-button" name="regular-button" value="Press me!" />
+          <br />
+          Submit Button
+          <input type="submit" id="submit-button" name="submit-button" value="Submit me!" />
+          <br />
+          Reset Button
+          <input type="reset" id="reset-button" name="reset-button" value="Reset me!" />
+          <br /><br />
+
+          File Field: <br />
+          <input type="field" id="file-field" name="file-field" size="30" />
+          <br /><br />
+        </form>
+
+
+
+- HTML Form Content Groups
+
+    - The 'textarea' Tag
+
+    - The 'fieldset' Tag
+
+    - The 'legend' Tag
+
+
+
+- HTML Form Option Selection
+
+    - The 'select' and 'option' Tags
+
+    - The 'optgroup' Tag
+
+
+
+- The Button Tag
+
+
+
+- New HTML5 Form Tags
+
+    - The 'datalist' Tag
+
+    - The 'keygen' Tag
+
+    - The 'output' Tag
