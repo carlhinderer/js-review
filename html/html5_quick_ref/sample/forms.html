@@ -7,5 +7,66 @@
     <body>
         <h2>Form Tags</h2>
         <hr />
+
+        <h4>Input Types</h4>
+        <form action="url_to_send_data" method="post">
+          Textbox: <br />
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" value="" size="30" maxlength="40" />
+          <br /><br />
+
+          Password Box: <br />
+          <label for="password">Password</label>
+          <input type="password" id="password" value="" size="30" maxlength="40" />
+          <br /><br />
+
+          Radio Buttons: <br />
+          <label for="favorite-team">Favorite Team</label> <br />
+          <input type="radio" id="team-browns" name="favorite-team" value="browns" checked="checked" />
+          Browns <br />
+          <input type="radio" id="team-buckeyes" name="favorite-team" value="buckeyes" />
+          Buckeyes
+          <br /><br />
+
+          Checkboxes: <br />
+          <label for="sports">Sports</label> <br />
+          <input type="checkbox" id="baseball" value="baseball" />
+          Baseball <br />
+          <input type="checkbox" id="football" value="football" />
+          Football
+          <br /><br />
+
+          List Box: <br />
+          <select id="age">
+            <option value="25" selected="selected">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+          </select>
+          <br /><br />
+
+          Text Area: <br />
+          <textarea  id="comments"  name="comments"  cols=”100” rows=”150”>Type Here...</textarea>
+          <br /><br />
+
+          Hidden Fields: <br />
+          <input type="hidden" id="secret" value="secret" />
+          <br /><br />
+
+          Buttons: <br />
+          Button
+          <input type="button" id="regular-button" name="regular-button" value="Press me!" />
+          <br />
+          Submit Button
+          <input type="submit" id="submit-button" name="submit-button" value="Submit me!" />
+          <br />
+          Reset Button
+          <input type="reset" id="reset-button" name="reset-button" value="Reset me!" />
+          <br /><br />
+
+          File Field: <br />
+          <input type="file" id="file-field" name="file-field" size="30" />
+          <br /><br />
+        </form>
     </body>
 </html>

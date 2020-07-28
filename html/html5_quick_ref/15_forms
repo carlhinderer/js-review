@@ -245,9 +245,34 @@
 
     - The 'textarea' Tag
 
+        The 'textarea' tag is used to define multi-line input controls.
+
+          <textarea rows="5" cols="250" maxlength="1250" required
+                    name="myfavoritecar" form="cardescription" autofocus
+                    placeholder="Write a short paragraph on your favorite car">
+          Please write a short paragraph on your favorite car and brand in here!
+          </textarea>
+
+
     - The 'fieldset' Tag
 
+        The 'fieldset' tag draws a box around related elements to group them visually.
+
+          <fieldset name="carbrands" form="carform">
+             <label ...>Ferrari</label>
+             <input ... /><br>
+          </fieldset>                        
+
+
     - The 'legend' Tag
+
+        The 'legend' tag defines a caption for the 'fieldset' element.
+
+          <fieldset name="carbrands" form="carform">
+              <legend>Choose Your Favorite Exotic Sports Car Model:</legend>
+              <label ...>Ferrari</label>
+              <input ... /><br>
+          </fieldset>          
 
 
 
@@ -255,11 +280,40 @@
 
     - The 'select' and 'option' Tags
 
+        The 'select' element create drop-down lists.  The 'option' tag is used to define
+          options in the list.
+
+          <select form="carform" required name="brandlist" autofocus size="4">
+              <option value="ferrari" label="Ferrari">Enzo Ferrari</option>
+              <option value="maserati" label="Maserati">Alfieri Maserati</option>
+              <option value="bugatti" label="Bugatti">Ettore Isidoro Bugatti</option>
+              <option value="lmbo" label="Lamborghini">Ferruccio Lamborghini</option>
+          </select>              
+
+
     - The 'optgroup' Tag
+
+        The 'optgroup' tag groups related options in drop-down lists.
+
+          <select form="carform" required name="brandlist" autofocus size="4">
+              <optgroup label="More Affordable Exotic Cars">              
+                  <option value="ferrari" label="Ferrari">Enzo Ferrari</option>
+                  <option value="maserati" label="Maserati">Alfieri Maserati</option>
+              </optgroup>              
+              <optgroup label="Less Affordable Exotic Cars">              
+                  <option value="bugatti" label="Bugatti">Ettore Isidoro Bugatti</option>
+                  <option value="lambo" label="Lamborghini">Ferruccio Lamborghini</option>
+              </optgroup>              
+          </select>
 
 
 
 - The Button Tag
+
+    The 'button' tag defines clicable buttons for submitting or resetting a form.
+
+      <button type="submit" value="Submit Choices" form="carform" name="B1" />
+      <button type="reset" value="Reset Choices" form="carform" name="B2" />
 
 
 
@@ -267,6 +321,38 @@
 
     - The 'datalist' Tag
 
+        The 'datalist' tag specifies a list of pre-defined options for an 'input' element to
+          use via the 'list' attribute.
+
+          <input list="italiancars">
+              <datalist id="italiancars">
+                  <option value="Ferrari">
+                  <option value="Maserati">
+                  <option value="Bugatti">
+                  <option value="Lamborghini">
+              </datalist>                  
+
+
     - The 'keygen' Tag
 
+        The 'keygen' tag allows you to specify a security key-pair generator field, used 
+          for securing form data.
+
+          <form action="private_keygen.asp" method="get" name="keyform">
+              Username: <input type="text" name="user_name">
+              Encryption: <keygen name="security_key">              
+              <button type="submit" value="Submit Secure Key" form="keyform" name="K1"/>
+          </form>
+
+
     - The 'output' Tag
+
+        The 'output' tag represents the results of a calculation.
+
+          <form name="add2numbers" 
+                onsubmit="return false" 
+                oninput="o.value = parseInt(a.value) + parseInt(b.value)">
+              <input name="a" type="number" step="any"> +
+              <input name="b" type="number" step="any"> =
+              <output name="o"></output>
+          </form>
