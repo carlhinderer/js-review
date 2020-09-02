@@ -5,7 +5,71 @@
         <title>Head Section Tags</title>
     </head>
     <body>
-        <h2>Head Tags</h2>
+        <h2>Head Section Tags</h2>
         <hr />
+
+        <h4>The link Tag</h4>
+        <p>The &lt;link&gt; tag allows assets defined in external files to be linked
+            to an HTML document.</p>
+
+        &lt;!-- Add a favicon --&gt; <br>
+        &lt;link rel="icon" href="itvclock.ico"&gt; <br><br>
+
+        &lt;!-- Add a stylesheet --&gt; <br>
+        &lt;link rel="stylesheet" type="text/css" href="itvclock.css"&gt; <br><br>
+
+        &lt;!-- Add a link to an author page --&gt; <br>
+        &lt;link rel="author"                                                                              
+                 href="https://plus.google.com/u/0/+MarkTwain/about/p/pub"
+                 title="Mark Twain"&gt; <br><br>
+
+
+        <h4>The script Tag</h4>
+        <p>The &lt;script&gt; tag is used to add JavaScript files.</p>
+
+        &lt;!-- HTML 4 --&gt; <br>
+        &lt;script src="itvclock.js" type="text/javascript" /&gt; <br><br>
+
+        &lt;!-- HTML 5 --&gt; <br>
+        &lt;script src="itclock.js"&gt; <br><br>
+
+        <p>To process the JS after rendering the document, use the 'defer' parameter.</p>
+        &lt;!-- HTML 4 --&gt; <br>
+        &lt;script src="itvclock.js" type="text/javascript" defer="defer" /&gt; <br><br>
+
+        &lt;!-- HTML 5 --&gt; <br>
+        &lt;script src="itvclock.js" defer="defer"&gt; <br><br>
+
+        <p>To process the JS and render the HTML at the same time, use the 'async' parameter.</p>
+        &lt;!-- HTML 4 --&gt; <br>
+        &lt;script src="itvclock.js" type="text/javascript" async="async" /&gt; <br><br>
+
+        &lt;!-- HTML 5 --&gt; <br>
+        &lt;script src="itvclock.js" async="async"&gt; <br><br>
+
+
+        <h4>The noscript Tag</h4>
+        <p>The &lt;noscript&gt; tag can be added alongside the script tag.</p>
+        &lt;noscript&gt;No JavaScript Support; Please Enable JavaScript!&lt;/noscript&gt;
+        <br><br>
+
+
+        <h4>Embedding JS Code</h4>
+        <p>To embed JS code directly in the page:</p>
+        &lt;head&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;<br>       
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document.getElementById("JSapp").
+        innerHTML="Hello World JavaScript";<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;<br>
+        &lt;/head&gt;<br><br>
+
+
+        <h4>The style Tag</h4>
+        <p>The &lt;style&gt; tag is used to add inline styles.</p>
+        &lt;head&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;style type=text/css&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 { color: green; }<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
+        &lt;/head&gt;<br><br>
     </body>
 </html>
