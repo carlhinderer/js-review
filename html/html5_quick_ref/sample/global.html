@@ -84,7 +84,79 @@
         </pre>
         <br>
 
+
         <h3>HTML4 Global Attributes</h3>
-        <br>
+
+        <h5>The ACCESSKEY Parameter</h5>
+        <p>This attribute allows you to specify a keyboard shortcut for your elements.</p>
+        <pre>
+        &lt;a href="http://www.Apress.com" accesskey="p"&gt;Publisher Website&lt;/a&gt;
+        &lt;a href="http://www.WallaceJackson.com" accesskey="a"&gt;Author Website&lt;/a&gt;
+        </pre>
+
+        <h5>The CLASS Parameter</h5>
+        <p>This attribute allows you to specify a classname for your tags.</p>
+        <pre>
+        &lt;!-- Class definition --&gt;
+        &lt;head&gt;
+            &lt;style&gt;
+                p.coloredtext { color: red; }
+            &lt;/style&gt;
+        &lt;/head&gt;
+
+        &lt;!-- Use the class --&gt;
+        &lt;p class="coloredtext"&gt;This text will be displayed in a Red color.&lt;/p&gt;
+        </pre>
+
+        <h5>The DIR Parameter</h5>
+        <p>This attribute allows you to specify the direction you want text-based elements to
+          be read.</p>
+        <pre>
+        &lt;p dir="rtl"&gt;This Paragraph Will Be Written from the Right To the Left!&lt;/p&gt;
+        </pre>
+
+        <h5>The ID Parameter</h5>
+        <p>This attribute allows you to specify an id to use as a handle.  The 
+          'document.getElementById()' function can be used to access the element in scripts.</p>
+        <pre>
+        &lt;body&gt;
+            &lt;!-- Create element --&gt;
+            &lt;p id="helloworld"&gt;Click this button to change to: Hello World!&lt;/p&gt;
+            &lt;button onclick="HelloWorldFunction()"&gt;Change Text, Please!&lt;/button&gt;
+
+            &lt;!-- Use the handle --&gt;
+            &lt;script&gt;
+               function HelloWorldFunction() {
+                  document.getElementById("helloworld").innderHTML = "Hello World";
+               }
+            &lt;/script&gt;
+        &lt;/body&gt;
+        </pre>
+
+        <h5>The LANG Parameter</h5>
+        <p>This attribute allows you to specify the language used in text-based elements.</p>
+        <pre>
+        &lt;p lang="es">Buenos Dias, Compadres!&lt;/p&gt;
+        </pre>
+
+        <h5>The STYLE Parameter</h5>
+        <p>This attribute allows you to specify inline CSS styles on an element.</p>
+        <pre>
+        &lt;p style="color:green"&gt;This text will now use the green color!&lt;/p&gt;
+        </pre>
+
+        <h5>The TABINDEX Parameter</h5>
+        <p>This attribute allows you to specify a tab key order for your tags.</p>
+        <pre>
+        &lt;a href="http://www.Apress.com" tabindex="2"&gt;Publisher's Website&lt;/a&gt;
+        &lt;a href="http://www.WallaceJackson.com" tabindex ="1"&gt;Author's Website&lt;/a&gt;
+        &lt;a href="http://www.Luv2Code.com" tabindex ="3"&gt;Tech Reviewer Website&lt;/a&gt;
+        </pre>
+
+        <h5>The TITLE Parameter</h5>
+        <p>This attribute is used to display tooltips when you mouse over an element.</p>
+        <pre>
+        &lt;p title="This will display on Mouse-Over"&gt;Mouse-Over Text for Tool Tip!&lt;/p&gt;
+        </pre>
     </body>
 </html>
