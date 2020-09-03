@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Global Attributes</title>
+    </head>
+    <body>
+        <h2>Global Attributes</h2>
+        <hr />
+
+        <h3>HTML5 Global Attributes</h3>
+
+        <h5>The CONTENTEDITABLE Parameter</h5>
+        <p>This option sets whether a user can edit the content inside an element.</p>
+        <pre>
+        &lt;p contenteditable="true"&gt;Go ahead, edit this text if you're so inclined&lt;/p&gt;
+        </pre>
+
+        <h5>The CONTEXTMENU Parameter</h5>
+        <p>This option sets whether a user can open a context-sensitive menu by right-clicking
+          the content inside of the element.</p>
+        <pre>
+        &lt;div contextmenu="divmenu"&gt;
+            &lt;menu id="divmenu" type="context"&gt;
+                &lt;menuitem label="Menu Option 1"&gt;&lt;/menuitem&gt;
+                &lt;menuitem label="Menu Option 2"&gt;&lt;/menuitem&gt;
+                &lt;menuitem label="Menu Option 3"&gt;&lt;/menuitem&gt;
+            &lt;/menu&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h5>The DATA- Parameter</h5>
+        <p>This attribute allows you to specify custom private data type definitions to
+          contain inside the element.</p>
+        <pre>
+        &lt;div contextmenu="carmenu"&gt;
+            &lt;menu id="carmenu" type="context"&gt;
+                  &lt;menuitem data-car="german"   label="Mercedez Benz"&gt;&lt;/menuitem&gt;     
+                  &lt;menuitem data-car="italian"  label="Lamborghini"&gt;&lt;/menuitem&gt;     
+                  &lt;menuitem data-car="american" label="Corvette"&gt;&lt;/menuitem&gt;
+            &lt;/menu&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h5>The DRAGGABLE Parameter</h5>
+        <p>This attribute allows you to specify whether the user can drag the content inside the
+          tag on a display screen.</p>
+        <pre>
+        &lt;p draggable="true"&gt;You're able to drag this paragraph around the screen&lt;/p&gt;
+        </pre>
+
+        <h5>The DROPZONE Parameter</h5>
+        <p>This attribute allows you to specify the action that is implemented once the user
+          drags content into the place on the screen.  The 3 options for dropzone are
+          'move', 'copy', and 'link'.</p>
+        <pre>
+        &lt;div dropzone="move"&gt;Content Child Elements/Tags will be in here&lt;/div&gt;
+        &lt;div dropzone="copy"&gt;Content Child Elements/Tags will be in here&lt;/div&gt;
+        &lt;div dropzone="link"&gt;Content Child Elements/Tags will be in here&lt;/div&gt;
+        </pre>
+
+        <h5>The HIDDDEN Parameter</h5>
+        <p>This attribute allows you to specify whether you want your element to be hidden from 
+          view.</p>
+        <pre>
+        &lt;p hidden&gt;This paragraph will be hidden from the user's view&lt;/p&gt;
+        </pre>
+
+        <h5>The SPELLCHECK Parameter</h5>
+        <p>This attribute allows you to specify whether you want your text-based elements to have
+          the spell-checking feature enabled.</p>
+        <pre>
+        &lt;p contenteditable="true" spellcheck="true"&gt;Paragraph with spellchecking&lt;/p&gt;
+        </pre>
+
+        <h5>The TRANSLATE Parameter</h5>
+        <p>This attribute allows you to specify whether you want your text-sized elements to
+          be translated into different languages.</p>
+        <pre>
+        &lt;p&gt;This Paragraph Will Be Translated by Default, to Localize the Content&lt;/p&gt;
+        &lt;p translate="yes"&gt;This Paragraph WILL Be Translated, for Localization.&lt;/p&gt;
+        &lt;p translate="no"&gt;This Paragraph Will NOT Be Translated or Localized&lt;/p&gt;
+        &lt;/pre&gt;
+        </pre>
+        <br>
+
+        <h3>HTML4 Global Attributes</h3>
+        <br>
+    </body>
+</html>
