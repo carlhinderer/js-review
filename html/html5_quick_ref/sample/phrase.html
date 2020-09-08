@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Phrase Tags</title>
+        <style>
+            body { margin-left: 50px; margin-right: 50px; margin-bottom: 100px; }
+            hr { margin-bottom: 50px; }
+        </style>
+    </head>
+    <body>
+        <h2>Phrase Tags</h2>
+        <hr />
+
+        <h4>The 'dfn' Tag</h4>
+
+        <p>The 'dfn' tag represents the defining instance of a term used in a document, 
+          website, or application.  This defining instance is the first usage of a particular
+          term within a given document.</p>
+        <pre>
+        &lt;p&gt;Did you know &lt;dfn&gt;JSON&lt;/dfn&gt; stands for: JavaScript Object Notation?&lt;/p&gt;
+        </pre>
+
+
+        <h4>The 'strong' Tag</h4>
+
+        <p>The 'strong' tag is the semantic search version of the 'b' tag.  It bolds text and 
+          also indicates greater importance.</p>
+        <pre>
+        &lt;p&gt;This text is &lt;strong&gt;important&lt;/strong&gt;&lt;/p&gt;
+        </pre>
+
+
+        <h4>The 'em' Tag</h4>
+        <p>The 'em' tag is the semantic search version of the 'i' tag.  It italicizes the text
+          and also indicates a greater emphasis.</p>
+        <pre>
+        &lt;p&gt;This text is &lt;em&gt;emphasized&lt;/em&gt;&lt;/p&gt;
+        </pre>
+
+
+        <h4>The 'kdb' Tag</h4>
+        <p>The 'kdb' tag specifies keyboard input.  It will make the text look more like 
+          a coding font.  Most HTML5 browsers will display it the same as they will teletype.</p>
+        <pre>
+        &lt;p&gt;Here is some &lt;kdb&gt;keyboard input&lt;/kdb&gt;&lt;/p&gt;
+        </pre>
+
+
+        <h4>The 'tt' Tag</h4>
+        <p>The 'tt' tag specifies teletype input.</p>
+        <pre>
+        &lt;p&gt;Here is some &lt;tt&gt;teletype input&lt;/tt&gt;&lt;/p&gt;
+        </pre>
+        
+
+        <h4>The 'code' Tag</h4>
+        <p>The 'code' tag defines a code fragment.</p>
+        <pre>
+        &lt;code&gt;              
+        legalButton.setOnAction(new EventHandler&lt;ActionEvent&gt;() {
+            @Override
+            public void handle(ActionEvent event) {
+                infoOverlay.getChildren().clear();
+                infoOverlay.getChildren().addAll(copyText, riteText);
+                infoOverlay.setTranslateY(380);
+                infoOverlay.setLineSpacing(-9);
+                uiContainer.setBackground(uiBackground3);
+                boardGameBackPlate.setImage(transparentlogo);
+            }
+        });
+        &lt;/code&gt;
+        </pre>
+
+
+        <h4>The 'samp' Tag</h4>
+        <p>The 'samp' tag is used to define code output, which is the result of running code.</p>
+        <pre>
+        &lt;samp&gt;              
+        Hello World!
+        &lt;/samp&gt;
+        </pre>        
+
+
+        <h4>The 'var' Tag</h4>
+        <p>The 'var' tag defines code variables.</p>
+        <pre>
+        &lt;code&gt;legalButton.setOnAction(new EventHandler&lt;ActionEvent&gt;() {
+           ...
+           infoOverlay.getChildren().addAll(&lt;var&gt;copyText, riteText&lt;/var&gt;);
+           ...
+        });
+        &lt;/code&gt;
+        </pre>
+    </body>
+</html>
