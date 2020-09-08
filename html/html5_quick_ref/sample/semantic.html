@@ -12,25 +12,209 @@
         <h2>Semantic Organization Tags</h2>
         <hr />
 
+
         <h4>The Section Tag</h4>
+        <p>The 'section' tag is used to define any kind of section in a document (ie a chapter).
+        It is a child of the 'body' and 'article' tags.</p>
+
+        <pre>
+        &lt;body&gt;
+            &lt;section id="exotic"&gt;
+                &lt;h1&gt;Exotic Car Document&lt;/h1&gt;
+            &lt;/section&gt;
+            &lt;section id="domestic"&gt;
+                &lt;h1&gt;Domestic Car Document&lt;/h1&gt;
+            &lt;/section&gt;
+        &lt;/body&gt;
+        </pre>
+
 
         <h4>The Header Tag</h4>
+        <p>The 'header' tag defines the introductory content of the document.</p>
+
+        <pre>
+        &lt;body&gt;
+            &lt;header&gt;
+                &lt;h1&gt;Exotic Cars Unleashed!&lt;/h1&gt;
+                &lt;p&gt;Top Level Keywords Relating to Exotic Cars from Every Nation&lt;/p&gt;
+            &lt;/header&gt;
+            &lt;section id="european"&gt;
+                ...
+            &lt;/section&gt;
+            &lt;section id="american"&gt;
+                ...
+            &lt;/section&gt;
+        &lt;/body&gt;
+        </pre>
+
 
         <h4>The Footer Tag</h4>
+        <p>The 'footer' tag is used to define a footnote for the document.</p>
+
+        <pre>
+        &lt;body&gt;
+            &lt;header&gt;
+                ...
+            &lt;/header&gt;
+            &lt;section id="european"&gt;
+                ...
+            &lt;/section&gt;
+            &lt;section id="american"&gt;
+                ...
+            &lt;/section&gt;
+            &lt;footer&gt;
+                &lt;h4&gt;Exotic Car Article Article, Contact and Sources:&lt;/h4&gt;
+                &lt;p&gt;Blog’s Author: Wallace Jackson&lt;/p&gt;
+                &lt;p&gt;Author e-mail: &lt;a href="mailto: wj@email.com"&gt;Wallace Jackson&lt;/a&gt;&lt;/p&gt;
+                &lt;p&gt;Blog’s Source: Magazine or Book Resources and Links would go here&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/body&gt;
+        </pre>
+
 
         <h4>The Main Tag</h4>
+        <p>The 'main' tag defines the topmost level of the document.  Only one 'main' tag is used
+          in a single document.  It cannot be used as a child of other semantic tags.</p>
+
+        <pre>
+        &lt;body&gt;
+            &lt;main&gt;              
+                &lt;header&gt;
+                    ...
+                &lt;/header&gt;
+                &lt;section id="european"&gt;
+                    ...
+                &lt;/section&gt;
+                &lt;section id="american"&gt;
+                    ...
+                &lt;/section&gt;
+                &lt;footer&gt;
+                    ...
+                &lt;/footer&gt;
+            &lt;/main&gt;
+        &lt;/body&gt;
+        </pre>
+
 
         <h4>The Nav Tag</h4>
+        <p>The 'nav' tag defines the user interface of the document's navigation area.</p>
+
+        <pre>
+        &lt;body&gt;
+            &lt;main&gt;              
+                &lt;header&gt;
+                &lt;/header&gt;
+                &lt;nav&gt;              
+                    &lt;a http://www.web-address.com/car-info.html&gt;CAR INFO&lt;/a&gt;
+                    &lt;a http://www.web-address.com/our-team.html&gt;OUR TEAM&lt;/a&gt;
+                    &lt;a http://www.web-address.com/buy-cars.html&gt;BUY CARS&lt;/a&gt;
+                &lt;/nav&gt;              
+                &lt;section id="european"&gt;
+                &lt;/section&gt;
+                &lt;section id="american"&gt;
+                &lt;/section&gt;
+                &lt;footer&gt;
+                &lt;/footer&gt;
+            &lt;/main&gt;
+        &lt;/body&gt;
+        </pre>
+
 
         <h4>The Article Tag</h4>
+        <p>The 'article' tag defines an article within your document.  It is independent of
+          your other document content.</p>
+
+        <pre>
+        &lt;body&gt;
+            &lt;main&gt;              
+                &lt;header&gt;
+                    ...
+                &lt;/header&gt;
+                &lt;nav&gt;
+                    ...
+                &lt;/nav&gt;
+                &lt;article&gt;              
+                    &lt;h2&gt;Exotic European Cars: Maintaining a Lead Over US Manufacturers&lt;/h2&gt;
+                    &lt;p&gt;Next Level Keywords Relating to Exotic Cars from European Union&lt;/p&gt;
+                    &lt;h3&gt;Exotic European Sports Car Round-Up&lt;/h3&gt;
+                    &lt;p&gt;Next Level Keywords Relating to Exotic European Sports Cars&lt;/p&gt;
+                &lt;/article&gt;              
+                &lt;article&gt;  
+                    ...            
+                &lt;/article&gt;              
+                &lt;footer&gt;
+                    ...
+                &lt;/footer&gt;
+              &lt;/main&gt;              
+        &lt;/body&gt;
+        </pre>
+
 
         <h4>The Aside Tag</h4>
+        <p>The 'aside' tag defines an informational sidebar in your document.  Sidebar content
+          should be related to the content adjacent to it.</p>
+
+        <pre>
+        &lt;article&gt;
+            &lt;h2&gt;Exotic European Cars: Maintaining a Lead Over US Manufacturers&lt;/h2&gt;
+            &lt;p&gt;Next Level Keywords Relating to Exotic Cars from European Union&lt;/p&gt;
+            &lt;aside&gt;              
+                &lt;h4&gt;Sidebar: Top Selling European Sports Cars&lt;/h4&gt;
+                &lt;p&gt;Next Level Keywords Relating to Top Selling European Sports Cars&lt;/p&gt;
+            &lt;/aside&gt;              
+        &lt;/article&gt;
+        </pre>
+
 
         <h4>The Figure and Figcaption Tags</h4>
+        <p>A 'figure' tag is used to define multimedia.  A 'figcaption' tag is nested to define
+          a caption for the new media asset.</p>
+
+        <pre>
+        &lt;article&gt;
+            &lt;h2&gt;Exotic American Cars: Gaining on the Domination of European Cars&lt;/h2&gt;
+            &lt;p&gt;Next Level Keywords Relating to Domestic Cars from North America&lt;/p&gt;
+            &lt;figure&gt;              
+                &lt;img src="sport-car-image.png" alt="sports car image related keywords"&gt;
+                &lt;figcaption&gt;Figure 1. Image of Popular American Sports Car&lt;/figcaption&gt;              
+            &lt;/figure&gt;              
+        &lt;/article&gt;
+        </pre>
+
 
         <h4>The Details and Summary Tags</h4>
+        <p>The 'details' tag is used in conjunction with the 'summary' tag to define pop-up
+          information that allows users to drill down for more information.  The 'details' tag 
+          has one parameter, 'open', which determines whether it is currently shown.</p>
+
+        <pre>
+        &lt;header&gt;
+            &lt;h1&gt;Exotic Cars Magazine: Current Exotic Car Articles&lt;/h1&gt;
+            &lt;p&gt;Top Level Keywords Relating to Exotic Cars from Every Nation&lt;/p&gt;
+            &lt;details&gt;              
+                &lt;summary&gt;Click Here For the List of Our Featured Articles!&lt;/summary&gt;              
+                &lt;p&gt;Exotic European Cars: Maintaining the Lead Over US Manufacturers&lt;/p&gt;
+                &lt;p&gt;Exotic American Cars: Gaining on the Domination of European Cars&lt;/p&gt;
+            &lt;/details&gt;              
+        &lt;/header&gt;
+        </pre>
+
 
         <h4>The Mark and Time Tags</h4>
+        <p>The 'mark' tag highlights important text.  The 'time' tag defines human-readable
+          time values.</p>
+
+        <pre>
+        &lt;header&gt;
+            &lt;h1&gt;Exotic Cars Magazine: Current Exotic Car Articles&lt;/h1&gt;
+            &lt;p&gt;Top Level Keywords Related to &lt;mark&gt;Exotic Cars&lt;/mark&gt; worldwide&lt;/p&gt;
+            &lt;details&gt;
+                &lt;summary&gt;List of Our Articles Released at &lt;time&gt;10:00&lt;/time&gt;&lt;/summary&gt;
+                &lt;p&gt;Exotic European Cars: Maintaining the Lead Over US Manufacturers&lt;/p&gt;
+                &lt;p&gt;Exotic American Cars: Gaining on the Domination of European Cars&lt;/p&gt;
+            &lt;/details&gt;
+        &lt;/header&gt;
+        </pre>
 
     </body>
 </html>
