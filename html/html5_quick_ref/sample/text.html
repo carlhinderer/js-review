@@ -95,5 +95,86 @@
         &lt;p&gt;Further Research Material&lt;sub&gt;[1]&lt;/sub&gt; is in the Footer.&lt;/p&gt;
         </pre>
 
+
+        <h4>Text Direction - The Bidirectional Text Tags</h4>
+        <p>The 'bdi' and 'bdo' tags are used to tell the rendering engine which direction the
+        text should go.  The options are left-to-right and right-to-left.</p>
+
+        <p>The 'bdi' tag is used to create an isolated (don't apply current document's text 
+        direction) portion of text with a specified direction.</p>
+        <pre>
+        &lt;p&gt;An example of &lt;bdi&gt;isolated text&lt;/bdi&gt; contained in a sentence.&lt;/p&gt;
+        </pre>
+
+        <p>The 'bdo' tag is used to override the default text direction.  The 'dir' attribute
+        which specifies the direction is required.</p>
+        <pre>
+        &lt;p&gt;Override this to create &lt;bdo dir="rtl"&gt;right to left&lt;/bdo&gt;text.&lt;/p&gt;
+        </pre>
+
+
+        <h4>Text Quotes - Quote and Blockquote Tags</h4>
+
+        <p>The 'q' tag tells the rendering engine that the enclosed text is a quote.  This tag
+        will add the quotation marks for you.  Optionally, the 'cite' attribute can be supplied
+        to source the quote with a URL.</p>
+        <pre>
+        &lt;q cite="http://www.wallacejackson.com"&gt;
+        This is a sample quotation from the Author of HTML5 Quick Markup Reference.
+        &lt;/q&gt;
+        </pre>
+
+        <p>The 'blockquote' tag is used for longer quotations, taken from another source.  Most 
+        browsers will indent the content in this tag.</p>
+        <pre>
+        &lt;blockquote cite="http://www.apress.com/9781484218624"&gt;            
+        This compact quick scripting syntax reference on JSON covers
+        syntax and parameters central to JSON object definitions, using
+        the NetBeans 8.1 open source and Eclipse IDE software tool packages.
+        &lt;/blockquote&gt;
+        </pre>
+
+
+        <h4>Text Citations - The Cite Tag</h4>
+
+        <p>The 'cite' tag tells the rendering engine to apply a title citation for an 
+        intellectual property work to any text inside the tags.</p>
+        <pre>
+        &lt;p&gt;I wrote &lt;cite&gt;JSON Quick Syntax Reference&lt;/cite&gt; during 2016.&lt;/p&gt;
+        </pre>
+
+
+        <h4>Special Circumstances - Other Tags</h4>
+
+        <p>The 'data' tag provides machine-readable data.  It is useful in cases in which data
+        needs to be in a certain format to be processed using JavaScript, but does not
+        format well for human-readable applications.</p>
+
+        <p>For instance, maybe we want to present numeric values to users as strings ('one', 'two'),
+        but you also need numerical representations so they can be sorted.</p>
+        <pre>
+        &lt;p&gt;An example of &lt;data&gt; tags contained in a paragraph. Numbers Include:
+            &lt;data value="1"&gt;One&lt;/data&gt;
+            &lt;data value="2"&gt;Two&lt;/data&gt;
+            &lt;data value="3"&gt;Three&lt;/data&gt;
+        &lt;/p&gt;
+        </pre>
+
+        <p>The 's' tag is used for strikethrough text.</p>
+        <pre>
+        &lt;p&gt;I wrote &lt;s&gt;Android Apps for Absolute Beginners 1st Ed.&lt;/s&gt; in 2010.&lt;/p&gt;
+        </pre>
+
+        <p>This tag is now deprecated and CSS should be used instead.</p>
+        <pre>
+        s { text-decoration: line-through; }
+        </pre>
+
+        <p>The 'del' tag is used for text that has been deleted and replaced using the 'ins'
+        tag.</p>
+        <pre>
+        &lt;p&gt;My favorite team is the &lt;del&gt;Steelers&lt;/del&gt; &lt;ins&gt;Browns&lt;/ins&gt;.&lt;/p&gt;
+        </pre>
+
     </body>
 </html>
