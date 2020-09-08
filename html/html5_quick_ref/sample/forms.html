@@ -3,70 +3,143 @@
 <html>
     <head>
         <title>Form Tags</title>
+        <style>
+            body { margin-left: 50px; margin-right: 50px; margin-bottom: 100px; }
+            hr { margin-bottom: 50px; }
+        </style>
     </head>
     <body>
         <h2>Form Tags</h2>
         <hr />
 
+        <h4>Form Example</h4>
+        <pre>
+        &lt;form action="url_to_send_data" method="post"&gt;
+            Textbox: &lt;br /&gt;
+            &lt;label for="first-name"&gt;First Name&lt;/label&gt;
+            &lt;input type="text" id="first-name" value="" size="30" maxlength="40" /&gt;
+            &lt;br /&gt;&lt;br /&gt;
+
+            Password Box: &lt;br /&gt;
+            &lt;label for="password"&gt;Password&lt;/label&gt;
+            &lt;input type="password" id="password" value="" size="30" maxlength="40" /&gt;
+            &lt;br /&gt;&lt;br /&gt;
+
+            Radio Buttons: &lt;br /&gt;
+            &lt;label for="favorite-team"&gt;Favorite Team&lt;/label&gt; &lt;br /&gt;
+            &lt;input type="radio" id="team-browns" name="favorite-team" value="browns" checked="checked" /&gt;
+            Browns &lt;br /&gt;
+            &lt;input type="radio" id="team-buckeyes" name="favorite-team" value="buckeyes" /&gt;
+            Buckeyes
+            &lt;br /&gt;&lt;br /&gt;
+
+            Checkboxes: &lt;br /&gt;
+            &lt;label for="sports"&gt;Sports&lt;/label&gt; &lt;br /&gt;
+            &lt;input type="checkbox" id="baseball" value="baseball" /&gt;
+            Baseball &lt;br /&gt;
+            &lt;input type="checkbox" id="football" value="football" /&gt;
+            Football
+            &lt;br /&gt;&lt;br /&gt;
+
+            List Box: &lt;br /&gt;
+            &lt;select id="age"&gt;
+                &lt;option value="25" selected="selected"&gt;25&lt;/option&gt;
+                &lt;option value="26"&gt;26&lt;/option&gt;
+                &lt;option value="27"&gt;27&lt;/option&gt;
+                &lt;option value="28"&gt;28&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;br /&gt;&lt;br /&gt;
+
+            Text Area: &lt;br /&gt;
+            &lt;textarea  id="comments"  name="comments"  cols=”100” rows=”150”&gt;Type Here...&lt;/textarea&gt;
+            &lt;br /&gt;&lt;br /&gt;
+
+            Hidden Fields: &lt;br /&gt;
+            &lt;input type="hidden" id="secret" value="secret" /&gt;
+            &lt;br /&gt;&lt;br /&gt;
+
+            Buttons: &lt;br /&gt;
+
+            Button
+            &lt;input type="button" id="regular-button" name="regular-button" value="Press me!" /&gt;
+            &lt;br /&gt;
+
+            Submit Button
+            &lt;input type="submit" id="submit-button" name="submit-button" value="Submit me!" /&gt;
+            &lt;br /&gt;
+
+            Reset Button
+            &lt;input type="reset" id="reset-button" name="reset-button" value="Reset me!" /&gt;
+            &lt;br /&gt;&lt;br /&gt;
+
+            File Field: &lt;br /&gt;
+            &lt;input type="file" id="file-field" name="file-field" size="30" /&gt;
+            &lt;br /&gt;&lt;br /&gt;
+        &lt;/form&gt;
+        </pre>
+
         <h4>Input Types</h4>
         <form action="url_to_send_data" method="post">
-          Textbox: <br />
-          <label for="first-name">First Name</label>
-          <input type="text" id="first-name" value="" size="30" maxlength="40" />
-          <br /><br />
+            Textbox: <br />
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" value="" size="30" maxlength="40" />
+            <br /><br />
 
-          Password Box: <br />
-          <label for="password">Password</label>
-          <input type="password" id="password" value="" size="30" maxlength="40" />
-          <br /><br />
+            Password Box: <br />
+            <label for="password">Password</label>
+            <input type="password" id="password" value="" size="30" maxlength="40" />
+            <br /><br />
 
-          Radio Buttons: <br />
-          <label for="favorite-team">Favorite Team</label> <br />
-          <input type="radio" id="team-browns" name="favorite-team" value="browns" checked="checked" />
-          Browns <br />
-          <input type="radio" id="team-buckeyes" name="favorite-team" value="buckeyes" />
-          Buckeyes
-          <br /><br />
+            Radio Buttons: <br />
+            <label for="favorite-team">Favorite Team</label> <br />
+            <input type="radio" id="team-browns" name="favorite-team" value="browns" checked="checked" />
+            Browns <br />
+            <input type="radio" id="team-buckeyes" name="favorite-team" value="buckeyes" />
+            Buckeyes
+            <br /><br />
 
-          Checkboxes: <br />
-          <label for="sports">Sports</label> <br />
-          <input type="checkbox" id="baseball" value="baseball" />
-          Baseball <br />
-          <input type="checkbox" id="football" value="football" />
-          Football
-          <br /><br />
+            Checkboxes: <br />
+            <label for="sports">Sports</label> <br />
+            <input type="checkbox" id="baseball" value="baseball" />
+            Baseball <br />
+            <input type="checkbox" id="football" value="football" />
+            Football
+            <br /><br />
 
-          List Box: <br />
-          <select id="age">
-            <option value="25" selected="selected">25</option>
-            <option value="26">26</option>
-            <option value="27">27</option>
-            <option value="28">28</option>
-          </select>
-          <br /><br />
+            List Box: <br />
+            <select id="age">
+                <option value="25" selected="selected">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+            </select>
+            <br /><br />
 
-          Text Area: <br />
-          <textarea  id="comments"  name="comments"  cols=”100” rows=”150”>Type Here...</textarea>
-          <br /><br />
+            Text Area: <br />
+            <textarea  id="comments"  name="comments"  cols=”100” rows=”150”>Type Here...</textarea>
+            <br /><br />
 
-          Hidden Fields: <br />
-          <input type="hidden" id="secret" value="secret" />
-          <br /><br />
+            Hidden Fields: <br />
+            <input type="hidden" id="secret" value="secret" />
+            <br /><br />
 
-          Buttons: <br />
-          Button
-          <input type="button" id="regular-button" name="regular-button" value="Press me!" />
-          <br />
-          Submit Button
-          <input type="submit" id="submit-button" name="submit-button" value="Submit me!" />
-          <br />
-          Reset Button
-          <input type="reset" id="reset-button" name="reset-button" value="Reset me!" />
-          <br /><br />
+            Buttons: <br />
 
-          File Field: <br />
-          <input type="file" id="file-field" name="file-field" size="30" />
-          <br /><br />
+            Button
+            <input type="button" id="regular-button" name="regular-button" value="Press me!" />
+            <br />
+
+            Submit Button
+            <input type="submit" id="submit-button" name="submit-button" value="Submit me!" />
+            <br />
+
+            Reset Button
+            <input type="reset" id="reset-button" name="reset-button" value="Reset me!" />
+            <br /><br />
+
+            File Field: <br />
+            <input type="file" id="file-field" name="file-field" size="30" />
+            <br /><br />
         </form>
     </body>
 </html>
