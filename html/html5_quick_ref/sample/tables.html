@@ -3,12 +3,30 @@
 <html>
     <head>
         <title>Table Tags</title>
+        <style>
+            body { margin-left: 50px; margin-right: 50px; margin-bottom: 100px; }
+            hr { margin-bottom: 50px; }
+        </style>
     </head>
     <body>
         <h2>Table Tags</h2>
         <hr />
 
+
         <h4>Simple Table</h4>
+        <pre>
+        &lt;table border='1'&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Heading 1&lt;/th&gt;
+                &lt;th&gt;Heading 2&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Data 1&lt;/td&gt;
+                &lt;td&gt;Data 2&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        </pre>
+        
         <table border='1'>
             <tr>
                 <th>Heading 1</th>
@@ -21,7 +39,25 @@
         </table>
         <br>
 
+
         <h4>Sortable Table</h4>
+        <pre>
+        &lt;table border='1' sortable&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Heading 1&lt;/th&gt;
+                &lt;th&gt;Heading 2&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;R1C1&lt;/td&gt;
+                &lt;td&gt;R1C2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;R2C1&lt;/td&gt;
+                &lt;td&gt;R2C2&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        </pre>
+        
         <table border='1' sortable>
             <tr>
                 <th>Heading 1</th>
@@ -37,6 +73,7 @@
             </tr>
         </table>
         <br>
+
 
         <h4>Semantic Table Tags with thead, tfoot, and tbody</h4>
         <section id="exotic car table">
@@ -77,6 +114,7 @@
             </table>
         </section>
         <br>
+
 
         <h4>The col and colgroup tags are used to apply changes across multiple rows</h4>
         <table border='1'>
